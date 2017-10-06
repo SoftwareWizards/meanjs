@@ -244,5 +244,4 @@ We welcome pull requests from the community! Just be sure to read the [contribut
 Inspired by the great work of [Madhusudhan Srinivasa](https://github.com/madhums/)
 The MEAN name was coined by [Valeri Karpov](http://blog.mongodb.org/post/49262866911/the-mean-stack-mongodb-expressjs-angularjs-and).
 
-## License
 [The MIT License](LICENSE.md)
