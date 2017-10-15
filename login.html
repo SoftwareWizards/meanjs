@@ -1,0 +1,33 @@
+<!-- At some point, we may create a separate login page for
+     the admin, or create some method for discerning whether
+     a username is an admin name or a regular user name.
+-->
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>myLadder Login</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <link rel="stylesheet"
+            href="https://fonts.googleapis.com/css?family=Anton">
+  </head>
+  <body>
+    <h1>Log in to myLadder!</h1>
+    <p>Please enter your username and password to gain access to myLadder.</p>
+   <div id="loginForm" align="center">
+     <!-- basic form is here -->
+    <form>
+      <input type="text" name="username" id="username" placeholder="Enter username" required />
+      <br />
+      <input type="text" name="password" id="password" placeholder="Enter password" required/><br>
+      <br />
+      <input type="submit" value="Submit">
+    </form>
+  </br>
+    <p>New User?</p>
+    <p><b><a href="RegistrationPage.html">Sign up</a></b></p>
+  </div>
+  </body>
+</html>
