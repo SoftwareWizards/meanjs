@@ -1,111 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html >
 <head>
 
-	<!-- metadata goes in head --> 
-	<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script> 
-	<script src= "UploadTask.js"></script> 
+	<!-- metadata goes in head -->
+	<script src= "https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.min.js"></script>
+	<script src= "UploadTask.js"></script>
 	<meta charset="utf-8">
 
 	<title>Create Your Task</title>
 </head>
-<body ng-controller = "UploadController">
+<body ng-app = "UploadTask" ng-controller = "UploadController">
 
 <h3>Create a New Task For a Climber</h3>
 
-	<!-- content goes in the body --> 
+	<!-- content goes in the body -->
 	<input type ="text" placeholder= "Search for Created Tasks" ng=model= "search">
-	
-		<ul> 
-			<li ng-repeat="item in list | filter"search"> 
+
+
+			<div ng-repeat="item in list | filter = "search">
 				{{item.taskname}}-{{item.completionDate}}-{{item.taskType}}
-			</li>
-		</ul> 
+			</div>
+
 		<form ng-submit = "addTask()">
-		 	<input type="text" placeholder="Name" ng-model="taskname"> 
-		 	<input type="text" placeholder="Completion Date" ng-model="completionDate"> 
-		 	<input type="text" placeholder="Task Type" ng-model="taskType"> 
-		 	<input type="submit" value="Submit"> 
-		</form> 
-		
-	
+		 	<input type="text" placeholder="Name" ng-model="taskname">
+		 	<input type="text" placeholder="Completion Date" ng-model="completionDate">
+		 	<input type="text" placeholder="Task Type" ng-model="taskType">
+		 	<input type="submit" value="Submit">
+		</form>
+
+
+
+
 	<!--
-	<form action="http://www.google.com" method="post"> 
-	
-	<!-- Enter task name --> 
+	<form action="http://www.google.com" method="post">
+
+	<!-- Enter task name -->
 		<div>
 			<label for= "task name">  Enter Task Name:</label>
 			<input type = "text" id= "task name" placeholder= "Task Name Here" required/>
-		</div> 
-		
+		</div>
+
 	<!-- Enter date for task-->
-		<label for= "completion date">  Complete by (date): </label> 
+		<label for= "completion date">  Complete by (date): </label>
 		<input type = "date" id= "completion date" placeholder= "MM/DD/YYY" required/>
-	
-	
+
+
 	<!-- Drop Down Menu for Task Type-->
-		<div> 
-			<label for="select-task-type">Select Task Type:</label> 
-			<select id = "select-task-type"> 
-				<option value="Technical"> Technical</option> 
-				<option value="General">General</option> 
+		<div>
+			<label for="select-task-type">Select Task Type:</label>
+			<select id = "select-task-type">
+				<option value="Technical"> Technical</option>
+				<option value="General">General</option>
 				<option value="Skilled">Skilled</option>
-			</select> 
-		</div> 
-		
+			</select>
+		</div>
+
 	<!-- Drop Down Menu for Skill Level Required-->
-	
-		<div> 
+
+		<div>
 			<label for="select-skill-level"> Skill Level Required: </label>
-			<select id="select-skill-level"> 
-				<option value = "Beginner"> Beginner</option> 
-				<option value = "Intermediate"> Intermediate</option> 
-				<option value = "Advanced"> Advanced </option> 
-			</select> 
-		</div> 
-		
+			<select id="select-skill-level">
+				<option value = "Beginner"> Beginner</option>
+				<option value = "Intermediate"> Intermediate</option>
+				<option value = "Advanced"> Advanced </option>
+			</select>
+		</div>
+
 	<!-- Drop Down Menu for Demographic Priority-->
-	
-		<div> 
+
+		<div>
 			<label for="select-demographic"> Demographic Priority: </label>
-			<select id="select-demographic"> 
-				<option value = "Homeless"> Homeless</option> 
-				<option value = "Battered Women"> Battered Women</option> 
-				<option value = "Recovering Addicts"> Recovering Addicts </option> 
+			<select id="select-demographic">
+				<option value = "Homeless"> Homeless</option>
+				<option value = "Battered Women"> Battered Women</option>
+				<option value = "Recovering Addicts"> Recovering Addicts </option>
 				<option value = "Senior Citizens"> Senior Citizens </option>
 				<option value = "Options"> Options </option>
-			</select> 
-		</div> 
-		
+			</select>
+		</div>
+
 	<!-- Task Instructions Box-->
-		<div> 
-			<label for= "task-instructions"> Task Instructions </label> 
-		</div> 
+		<div>
+			<label for= "task-instructions"> Task Instructions </label>
+		</div>
 		<div>
 			<textarea cols="40" rows= "4" id="task-instructions" placeholder="Enter instructions here"></textarea>
-		</div> 
-		
-		<div> 
-		
+		</div>
+
+		<div>
+
 	<!-- Attachments and submit-->
 		<p> Add any additional files below </p>
-		<label for= "file">  Submit Files </label> 
+		<label for= "file">  Submit Files </label>
 		<input type = "submit" name= "document" accept="file_extension|audio/*|video/*|image/*|media_type" id= "file"/>
-		
-  		
- 			
+
+
+
  		<div>
  			<button><h4><strong>Create Task</strong></h4></button>
  		</div>
- 			
-</form> 
-		
-		
-	
-	
-	
+
+</form>
+
+
+
+
+
 -->
-	
+
 
 </body>
 </html>
