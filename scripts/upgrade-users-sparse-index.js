@@ -61,3 +61,5 @@ function reportAndExit(message) {
     process.exit(0);
   }
 }
+
+// This file is fun and helps with mongoose-related things.
