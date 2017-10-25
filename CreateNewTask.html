@@ -1,0 +1,122 @@
+<html >
+	<head>
+		<title> Create New Task</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+
+		<script src="http://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.js"></script>
+		<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.11/angular.min.js"></script>
+
+		<script src="CreateNewTask.js"></script>
+		<script src="CreateNewTaskcontroller.js"></script>
+		<style> .glyphicon-thumbs-up { cursor:pointer } </style>
+		<style>
+	    .list_data { margin-bottom: 2rem }
+	    table, th, td { border: 1px solid #AAA }
+	    th { cursor: pointer }
+    	</style>
+<!--background-color-->
+			<style>
+				body{
+						background-color:#FFFAFA;
+					}
+			</style>
+
+	</head>
+	<body ng-app="UploadTask" ng-controller="MainCtrl">
+
+	<!-- Navigation Bar -->
+
+		<nav class="navbar navbar-inverse">
+  		<div class="container-fluid">
+    	<div class="navbar-header">
+      		<a class="navbar-brand" href="#">myLadder</a>
+    	</div>
+    	<ul class="nav navbar-nav">
+      		<li class="active"><a href="#">Home</a></li>
+      		<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Builder
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+         	<li><a href="#">Create New Task </a></li>
+					<li><a href="#">View Current Climbers</a></li>
+          <li><a href="#">Send Compensation</a></li>
+        </ul>
+      		</li>
+      		<li class="dropdown">
+        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Climber
+        <span class="caret"></span></a>
+        <ul class="dropdown-menu">
+         	<li><a href="#">Search Available Tasks</a></li>
+          	<li><a href="#">View Your Current Tasks</a></li>
+          	<li><a href="#">Accept Compensation</a></li>
+        </ul>
+      		<li><a href="#">Help</a></li>
+
+    	</ul>
+    	<ul class="nav navbar-nav navbar-right">
+      		<li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+      		<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+    	</ul>
+  		</div>
+		</nav>
+
+
+<!--Formatting for Create New Task Page -->
+
+
+		<div class="row">
+    	<div class="col-md-6 col-md-offset-3">
+
+      	<div class="page-header">
+        	<h1>Create New Task</h1>
+      	</div>
+
+<!--Search bar: implement 'filterObj' object used to filter posts -->
+		<input type="text" class="form-control" placeholder="Search" ng-model="filterObj.$">
+<!-- Directive ng-repeat code -->
+
+      	<table class="table">
+	<tr>
+		<th>Task Name</th>
+		<th>Type Name</th>
+		<th>Skill Level</th>
+		<th>Demographic Priority</th>
+
+
+	</tr>
+	<tr ng-repeat="post in posts | filter: filterObj | orderBy: 'name' as filteredListings" ng-click="showDetails($index)">
+		<td>{{post.name}}</td>
+		<td>{{post.type}}</td>
+		<td>{{post.level}}</td>
+		<td>{{post.priority}}</td>
+		<td> <input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow($index)"/> </td>
+
+	</tr>
+	</table>
+	<form ng-submit = "addPost()">
+		<div>
+			<input type = "text" ng-model= "name" placeholder= "Enter Task Name" />
+		</div>
+		<div>
+			<input type = "text" ng-model= "type" placeholder= "Enter Task Type"/>
+		</div>
+			<input type = "text" ng-model= "level" placeholder= "Enter Skill"/>
+		<div>
+			<input type = "text" ng-model= "priority" placeholder= "Enter Demographic Priority"/>
+		</div>
+			<button type = "submit"> Post </button>
+
+
+	</body>
+</html>
