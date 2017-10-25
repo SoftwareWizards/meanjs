@@ -68,7 +68,7 @@ module.exports = {
     owasp: {
       allowPassphrases: true,
       maxLength: 128,
-      minLength: 10,
+      minLength: 8,
       minPhraseLength: 20,
       minOptionalTestsToPass: 4
     }
