@@ -8,7 +8,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/meanjs/mean.git"
+    "url": "git+https://github.com/meanjs/mean.git"
   },
   "engines": {
     "node": ">=6.10.0",
@@ -97,10 +97,12 @@
     "socket.io": "~2.0.2",
     "validator": "~8.0.0",
     "winston": "~2.3.1",
-    "wiredep": "~4.0.0"
+    "wiredep": "~4.0.0",
+    "yeoman-generator": "^2.0.1"
   },
   "devDependencies": {
     "coveralls": "~2.13.0",
+    "grunt": "^1.0.1",
     "gulp-istanbul": "~1.1.1",
     "gulp-mocha": "~3.0.1",
     "gulp-protractor": "~4.0.0",
@@ -113,5 +115,13 @@
     "semver": "~5.4.1",
     "should": "~11.2.1",
     "supertest": "~3.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/meanjs/mean/issues"
+  },
+  "homepage": "https://github.com/meanjs/mean#readme",
+  "main": ".eslintrc.js",
+  "keywords": [
+    "json"
+  ]
 }
