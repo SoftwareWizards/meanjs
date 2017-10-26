@@ -11,8 +11,9 @@
   function menuConfig(Menus) {
 
     Menus.addSubMenuItem('topbar', 'admin', {
-      title: 'Manage Articles',
-      state: 'admin.articles.list'
+      title: 'Manage Tasks',
+      state: 'tasks.list',
+      role: ['admin']
     });
   }
 }());

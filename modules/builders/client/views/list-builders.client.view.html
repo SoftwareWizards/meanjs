@@ -1,0 +1,22 @@
+<section>
+  <div class="page-header">
+    <h1>Builders</h1>
+  </div>
+  <div class="list-group">
+    <a ng-repeat="builder in vm.builders"
+       ui-sref="builders.view({ builderId: builder._id })"
+       class="list-group-item">
+      <small class="list-group-item-text">
+        Posted on
+        <span ng-bind="builder.created | date:'mediumDate'"></span>
+        by
+        <span ng-if="builder.user" ng-bind="builder.user.displayName"></span>
+        <span ng-if="!builder.user">Deleted User</span>
+      </small>
+      <h4 class="list-group-item-heading" ng-bind="builder.name"></h4>
+    </a>
+  </div>
+  <div class="alert alert-warning text-center" ng-if="vm.builders.$resolved && !vm.builders.length">
+    No Builders yet, why don't you <a ui-sref="builders.create">create one</a>?
+  </div>
+</section>

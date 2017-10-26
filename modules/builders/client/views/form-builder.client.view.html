@@ -1,0 +1,24 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.builder._id ? 'Edit Builder' : 'New Builder'}}</h1>
+  </div>
+  <div class="col-md-12">
+    <form name="vm.form.builderForm" class="form-horizontal" ng-submit="vm.save(vm.form.builderForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Name</label>
+          <input name="name" type="text" ng-model="vm.builder.name" id="name" class="form-control" placeholder="Name" required>
+          <div ng-messages="vm.form.builderForm.name.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Builder name is required.</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.builder._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>
