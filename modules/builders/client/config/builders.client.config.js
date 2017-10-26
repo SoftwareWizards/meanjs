@@ -13,7 +13,8 @@
       title: 'Builders',
       state: 'builders',
       type: 'dropdown',
-      roles: ['builder']
+      // need to change roles so only admin can see this
+      roles: ['*']
     });
 
     // Add the dropdown list item
