@@ -5,6 +5,10 @@ label{
 	text-align: left;
 }
 
+label.control-label {
+	text-align: center;
+}
+
 /* did it push successfully */
 
 input{
