@@ -6,7 +6,7 @@
     <form name="vm.form.taskForm" class="form-horizontal" ng-submit="vm.save(vm.form.taskForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
-          <label class="control-label" for="name"> Task Name</label>
+          <label class="control-label" for="name">Task Name</label>
           <input name="name" type="text" ng-model="vm.task.name" id="name" class="form-control" placeholder="Task Name" required>
           <div ng-messages="vm.form.taskForm.name.$error" role="alert">
             <!-- optional error message

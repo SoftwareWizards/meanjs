@@ -1,9 +1,11 @@
 label{
 	display:inline-block;
-	width:200px;
-	margin-right:500px;
+	width:30px;
+	margin-right:50px;
 	text-align: center;
 }
+
+/* did it push successfully */
 
 input{
 
