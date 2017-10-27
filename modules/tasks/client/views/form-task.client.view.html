@@ -6,51 +6,39 @@
     <form name="vm.form.taskForm" class="form-horizontal" ng-submit="vm.save(vm.form.taskForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
-          <label class="control-label" for="name">Name</label>
-          <input name="name" type="text" ng-model="vm.task.name" id="name" class="form-control" placeholder="Name" required>
+          <label class="control-label" for="name"> Task Name</label>
+          <input name="name" type="text" ng-model="vm.task.name" id="name" class="form-control" placeholder="Task Name" required>
           <div ng-messages="vm.form.taskForm.name.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">Task name is required.</p>
+            <!-- optional error message
+            <p class="help-block error-text" ng-message="required">Task Name is required.</p>
+            -->
           </div>
-        </div>
+          </div>
 
-          <!--Search bar: implement 'filterObj' object used to filter posts -->
-          <input type="text" class="form-control" placeholder="Search" ng-model="filterObj.$">
-          <!-- Directive ng-repeat code -->
+            <!-- Text box for task type name -->
+            <div class="form-group" show-errors>
+              <label class="control-label" for="type">Task Type</label>
+              <input name="type" type="text" ng-model="vm.task.type" id="type" class="form-control" placeholder="Task Type" required>
+              </div>
 
-          <table class="table">
-            <tr>
-              <th>Task Name</th>
-              <th>Type Name</th>
-              <th>Skill Level</th>
-              <th>Demographic Priority</th>
+                <!-- Text box for skill level -->
+                <div class="form-group" show-errors>
+                  <label class="control-label" for="level">Skill Level</label>
+                  <input name="level" type="text" ng-model="vm.task.level" id="level" class="form-control" placeholder="Skill Level" required>
+                  </div>
 
-
-            </tr>
-            <tr ng-repeat="post in posts | filter: filterObj | orderBy: 'name' as filteredListings" ng-click="showDetails($index)">
-              <td>{{post.name}}</td>
-              <td>{{post.type}}</td>
-              <td>{{post.level}}</td>
-              <td>{{post.priority}}</td>
-              <td> <input type="button" value="Remove" class="btn btn-primary" ng-click="removeRow($index)"/> </td>
-
-            </tr>
-          </table>
-          <form ng-submit = "addPost()">
-            <!-- These are the four text boxes that need to be aligned --> 
-            <fieldset>
-            <div>
-              <input type = "text" ng-model= "name" placeholder= "Enter Task Name" />
-            </div>
-            <div>
-             </label><input type = "text" ng-model= "type" placeholder= "Enter Task Type"/>
-            </div>
-            <input type = "text" ng-model= "level" placeholder= "Enter Skill"/>
-            <div>
-              <input type = "text" ng-model= "priority" placeholder= "Enter Demographic Priority"/>
-            </div>
-            </fieldset>
-            <!-- <button type = "submit"> Post </button> -->
-
+                  <!-- Text box for Demographic Priority-->
+                  <div class="form-group" show-errors>
+                    <label class="control-label" for="priority">Demographic Priority</label>
+                    <select name="priority" ng-model="vm.post.priority" id= "priority" class="form-control" placeholder="Demographic Priority" required>
+                    <option value = ""> --- Please select --- </option>
+                    <option value = "Homeless"> Homeless</option>
+                    <option value = "Battered Women"> Battered Women</option>
+                    <option value = "Recovering Addicts"> Recovering Addicts</option>
+                    <option value = "Senior Citizens"> Senior Citizens</option>
+                    <option value = "Other"> Other</option>
+                    </select>
+                  </div>
 
 
         <div class="form-group">
