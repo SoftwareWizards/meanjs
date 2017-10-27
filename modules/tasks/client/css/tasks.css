@@ -2,12 +2,10 @@ label{
 	display:inline-block;
 	width:200px;
 	margin-right: 1px;
-	text-align: left;
+
 }
 
-label.control-label {
-	text-align: center;
-}
+
 
 /* did it push successfully */
 
