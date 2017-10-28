@@ -28,5 +28,14 @@
       state: 'tasks.create',
       roles: ['user']
     });
+
+    /* Add the dropdown send climber compensation
+    menuService.addSubMenuItem('topbar', 'tasks', {
+      title: 'Send Climber Compensation',
+      state: 'tasks.send',
+      roles: ['user']
+    });
+    */
   }
+
 }());

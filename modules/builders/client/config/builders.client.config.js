@@ -14,7 +14,7 @@
       state: 'builders',
       type: 'dropdown',
       // need to change roles so only admin can see this
-      roles: ['*']
+      roles: ['user']
     });
 
     // Add the dropdown list item
@@ -29,5 +29,6 @@
       state: 'builders.create',
       roles: ['user']
     });
+
   }
 }());

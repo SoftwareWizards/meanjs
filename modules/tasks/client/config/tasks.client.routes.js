@@ -49,6 +49,23 @@
           pageTitle: 'Edit Task {{ taskResolve.name }}'
         }
       })
+      /*send climber compensation route
+      .state('tasks.send', {
+        url: '/:taskId/send',
+        templateUrl: 'modules/tasks/client/views/form-task.client.view.html',
+        controller: 'TasksController',
+        controllerAs: 'vm',
+        resolve: {
+          taskResolve: getTask
+        },
+        data: {
+          roles: ['user', 'admin'],
+          pageTitle: 'Send Climber Compensation {{ taskResolve.name }}'
+        }
+      })
+
+      end*/
+
       .state('tasks.view', {
         url: '/:taskId',
         templateUrl: 'modules/tasks/client/views/view-task.client.view.html',
