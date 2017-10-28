@@ -1,28 +1,22 @@
-@media (min-width: 992px) {
-  .nav-users {
-    position: fixed;
-  }
+label{
+	display:inline-block;
+	width:400;
+	margin-right: 1px;
+	color: slategray;
+	text-align-all: left;
+	font: Helvetica Neue, Helvetica, Arial;
+	font-size: 16;
 }
-.social-account-container {
-  display: inline-block;
-  position: relative;
+
+
+/* did it push successfully */
+
+input{
+
 }
-.btn-add-remove-account {
-  pointer-events: none;
-  position: absolute;
-  right: 10px;
-  top: 10px;
-}
-.user-profile-picture {
-  max-height: 150px;
-  min-height: 150px;
-}
-.social-button {
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-.social-button:hover {
-  opacity: 0.65;
+
+fieldset{
+	border:none;
+	width:500px;
+	margin:0px auto;
 }

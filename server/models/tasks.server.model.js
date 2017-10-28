@@ -26,7 +26,7 @@ var taskSchema = new Schema({
     trim: true,
     default: '',
   },
-  demographic: {
+  taskType: {
     type: String,
     trim: true
   },
@@ -45,6 +45,7 @@ var taskSchema = new Schema({
   },
   updated: {
     type: Date
+    default: Date
   },
   created: {
     type: Date,
@@ -53,7 +54,7 @@ var taskSchema = new Schema({
 });
 
 /* create a 'pre' function that adds the updated_at (and created_at if not already there) property */
-taskSchema.pre('save', function(next) {
+listingSchema.pre('save', function(next) {
   var currentTime = new Date;
   this.updated_at = currentTime;
   if(!this.created_at)
@@ -64,7 +65,7 @@ taskSchema.pre('save', function(next) {
 });
 
 /* Use your schema to instantiate a Mongoose model */
-var Task = mongoose.model('Task', taskSchema);
+var task = mongoose.model('task', listingSchema);
 
-/* Export the model to make it available to other parts of your Node application */
-module.exports = Task;
+/* Export the model to make it avaiable to other parts of your Node application */
+module.exports = task;

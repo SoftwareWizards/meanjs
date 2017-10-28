@@ -1,0 +1,54 @@
+<section>
+  <div class="page-header">
+    <h1>{{vm.task._id ? 'Edit Task' : 'Create A New Task'}}</h1>
+  </div>
+  <h4>Welcome, { Builder }! Create your task to give someone a life-changing opportunity! </h4> <br />
+  <div class="col-md-12">
+    <form name="vm.form.taskForm" class="form-horizontal" ng-submit="vm.save(vm.form.taskForm.$valid)" novalidate>
+      <fieldset>
+        <div class="form-group" show-errors>
+          <label class="control-label" for="name">Enter Your Task Name</label>
+          <input name="name" type="text" ng-model="vm.task.name" id="name" class="form-control" placeholder="Task Name" required>
+          <div ng-messages="vm.form.taskForm.name.$error" role="alert">
+            <!-- optional error message
+            <p class="help-block error-text" ng-message="required">Task Name is required.</p>
+            -->
+          </div>
+          </div>
+
+            <!-- Text box for task type name -->
+            <div class="form-group" show-errors>
+              <label class="control-label" for="type">Enter Your Task Type</label>
+              <input name="type" type="text" ng-model="vm.task.type" id="type" class="form-control" placeholder="Task Type" required>
+              </div>
+
+                <!-- Text box for skill level -->
+                <div class="form-group" show-errors>
+                  <label class="control-label" for="level">Enter The Skill Level (beginner, novice, skilled)</label>
+                  <input name="level" type="text" ng-model="vm.task.level" id="level" class="form-control" placeholder="Skill Level" required>
+                  </div>
+
+                  <!-- Text box for Demographic Priority-->
+                  <div class="form-group" show-errors>
+                    <label class="control-label" for="priority">Enter Demographic Priority</label>
+                    <select name="priority" ng-model="vm.post.priority" id= "priority" class="form-control" placeholder="Demographic Priority" required>
+                    <option value = ""> --- Please select --- </option>
+                    <option value = "Homeless"> Homeless</option>
+                    <option value = "Battered Women"> Battered Women</option>
+                    <option value = "Recovering Addicts"> Recovering Addicts</option>
+                    <option value = "Senior Citizens"> Senior Citizens</option>
+                    <option value = "Other"> Other</option>
+                    </select>
+                  </div>
+
+
+        <div class="form-group">
+          <button type="submit" class="btn btn-default">{{vm.task._id ? 'Update' : 'Create'}}</button>
+        </div>
+        <div ng-show="vm.error" class="text-danger">
+          <strong ng-bind="vm.error"></strong>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

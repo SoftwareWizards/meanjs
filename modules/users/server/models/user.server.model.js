@@ -125,8 +125,12 @@ var UserSchema = new Schema({
   },
   resetPasswordExpires: {
     type: Date
-  }
+  },
+
 });
+
+
+// We need admin, moderator, builder, climber
 
 /**
  * Hook a pre save method to hash the password
