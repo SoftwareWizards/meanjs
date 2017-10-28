@@ -16,6 +16,25 @@ exports.read = function (req, res) {
 };
 
 /**
+ * Create a Task
+ */
+exports.create = function (req, res) {
+
+  var task = new Task(req.body);
+
+  task.save(function(err) {
+    if (err) {
+      return res.status(422).send({
+        message: errorHandler.getErrorMessage(err)
+      });
+    }
+
+    res.json(task);
+  });
+
+};
+
+/**
  * Update a Task
  */
 exports.update = function (req, res) {
