@@ -6,7 +6,6 @@ label{
 }
 
 
-
 /* did it push successfully */
 
 input{
@@ -15,6 +14,6 @@ input{
 
 fieldset{
 	border:none;
-	width:500px;
+	width:50px;
 	margin:0px auto;
 }
