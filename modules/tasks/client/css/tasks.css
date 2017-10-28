@@ -1,8 +1,9 @@
 label{
 	display:inline-block;
-	width:400px;
-	margin-right: 1px;
+	width:400;
+	margin-right: 1;
 	color: blue;
+	text-align-all: left;
 }
 
 
@@ -14,6 +15,6 @@ input{
 
 fieldset{
 	border:none;
-	width:50px;
+	width:500px;
 	margin:0px auto;
 }
