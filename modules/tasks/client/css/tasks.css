@@ -4,7 +4,8 @@ label{
 	margin-right: 1px;
 	color: slategray;
 	text-align-all: left;
-	font-family: serif;
+	font: Helvetica Neue, Helvetica, Arial;
+	font-size: 16;
 }
 
 
