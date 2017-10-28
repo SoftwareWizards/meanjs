@@ -20,10 +20,28 @@
   </div>
 
   <!-- animation fading used in lieu of carousel in order to convey the essence of the homepage feel. Will probably do an auto carousel in final prod. -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-  <img class="mySlides w3-animate-fading" src="https://www.csicop.org/uploads/images/sagancollection.jpg">
-  <img class="mySlides w3-animate-fading" src="http://erdosbaconsabbath.com/images/carl-sagan/640x360.jpg">
-  <img class="mySlides w3-animate-fading" src="http://wonderfest.org/wp-content/uploads/2014/10/1-carl-sagan-a-la-sombra-de-la-sabina.jpg">
-  <img class="mySlides w3-animate-fading" src="http://ww2.hdnux.com/photos/13/74/51/3131993/3/920x920.jpg">
+  <img class="mySlides w3-animate-fading" src="https://www.csicop.org/uploads/images/sagancollection.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="http://erdosbaconsabbath.com/images/carl-sagan/640x360.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="http://ww2.hdnux.com/photos/13/74/51/3131993/3/920x920.jpg" style="width:100%">
+  <img class="mySlides w3-animate-fading" src="http://erdosbaconsabbath.com/images/carl-sagan/640x360.jpg" style="width:100%">
+  <!-- </div> -->
 
+  <script>
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}
+      x[myIndex-1].style.display = "block";
+      setTimeout(carousel, 9000);
+    }
+  </script>
 </section>
