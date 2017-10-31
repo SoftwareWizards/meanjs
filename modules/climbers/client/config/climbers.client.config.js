@@ -21,12 +21,13 @@
       title: 'List Climbers',
       state: 'climbers.list'
     });
-
+/*
     // Add the dropdown create item
     menuService.addSubMenuItem('topbar', 'climbers', {
       title: 'Create Climber',
       state: 'climbers.create',
       roles: ['user']
     });
+    */
   }
 }());
