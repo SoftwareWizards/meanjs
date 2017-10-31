@@ -23,12 +23,12 @@
       state: 'builders.list'
     });
 
-
+/*
     menuService.addSubMenuItem('topbar', 'builders', {
       title: 'Create Builder',
       state: 'builders.create',
       roles: ['user']
     });
-
+*/
   }
 }());
