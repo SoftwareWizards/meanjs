@@ -23,7 +23,7 @@
       state: 'builders.list'
     });
 
-    // Add the dropdown create item
+
     menuService.addSubMenuItem('topbar', 'builders', {
       title: 'Create Builder',
       state: 'builders.create',
