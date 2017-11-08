@@ -9,7 +9,7 @@
   CompensationsService.$inject = ['$resource'];
 
   function CompensationsService($resource) {
-    return $resource('api/compensations/:compensationId', {
+    return $resource('/api/compensations/:compensationId', {
       compensationId: '@_id'
     }, {
       update: {

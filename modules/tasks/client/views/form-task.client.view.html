@@ -30,7 +30,11 @@
                   <input name="level" type="text" ng-model="vm.task.level" id="level" class="form-control" placeholder="Skill Level" required>
                   </div>
 
-                  <!-- Text box for Demographic Priority-->
+              <div class="form-group" show-errors>
+                  <label class="control-label" for="priority">Enter Demographic Priority (Homeless, Battered Women, Alcholics, Other)</label>
+                  <input name="priority" type="text" ng-model="vm.task.priority" id="priority" class="form-control" placeholder="Demographic Priority" required>
+              </div>
+                  <!-- Text box for Demographic Priority
                   <div class="form-group" show-errors>
                     <label class="control-label" for="priority">Enter Demographic Priority</label>
                     <select name="priority" ng-model="vm.post.priority" id= "priority" class="form-control" placeholder="Demographic Priority" required>
@@ -42,7 +46,7 @@
                     <option value = "Other"> Other</option>
                     </select>
                   </div>
-
+                  -->
 
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.task._id ? 'Update' : 'Create'}}</button>

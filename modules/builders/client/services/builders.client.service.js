@@ -9,7 +9,7 @@
   BuildersService.$inject = ['$resource'];
 
   function BuildersService($resource) {
-    return $resource('api/builders/:builderId', {
+    return $resource('/api/builders/:builderId', {
       builderId: '@_id'
     }, {
       update: {

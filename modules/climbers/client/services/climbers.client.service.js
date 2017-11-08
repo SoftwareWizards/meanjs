@@ -9,7 +9,7 @@
   ClimbersService.$inject = ['$resource'];
 
   function ClimbersService($resource) {
-    return $resource('api/climbers/:climberId', {
+    return $resource('/api/climbers/:climberId', {
       climberId: '@_id'
     }, {
       update: {

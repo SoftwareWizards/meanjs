@@ -26,7 +26,7 @@
     menuService.addSubMenuItem('topbar', 'tasks', {
       title: 'Create Task',
       state: 'tasks.create',
-      roles: ['user']
+      roles: ['*']
     });
 
     /* Add the dropdown send climber compensation
