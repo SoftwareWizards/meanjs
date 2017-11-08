@@ -9,4 +9,5 @@
 
   function menuConfig(menuService) {
 
-}});
+  }
+});
