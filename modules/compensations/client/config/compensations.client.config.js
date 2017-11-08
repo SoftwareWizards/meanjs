@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('tasks')
+    .module('compensations')
     .run(menuConfig);
 
   menuConfig.$inject = ['menuService'];
@@ -10,22 +10,22 @@
   function menuConfig(menuService) {
     // Set top bar menu items
     menuService.addMenuItem('topbar', {
-      title: 'Tasks',
-      state: 'tasks',
+      title: 'Compensations',
+      state: 'compensations',
       type: 'dropdown',
       roles: ['*']
     });
 
     // Add the dropdown list item
-    menuService.addSubMenuItem('topbar', 'tasks', {
-      title: 'List Tasks',
-      state: 'tasks.list'
+    menuService.addSubMenuItem('topbar', 'compensations', {
+      title: 'List Compensations',
+      state: 'compensations.list'
     });
 
     // Add the dropdown create item
-    menuService.addSubMenuItem('topbar', 'tasks', {
-      title: 'Create Task',
-      state: 'tasks.create',
+    menuService.addSubMenuItem('topbar', 'compensations', {
+      title: 'Create Compensation',
+      state: 'compensations.create',
       roles: ['*']
     });
   }

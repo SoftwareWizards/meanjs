@@ -13,7 +13,7 @@
       title: 'Climbers',
       state: 'climbers',
       type: 'dropdown',
-      roles: ['*']
+      roles: ['admin']
     });
 
     // Add the dropdown list item

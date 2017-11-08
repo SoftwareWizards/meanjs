@@ -1,0 +1,28 @@
+<section>
+  <div class="page-header">
+    <h1><span ng-bind="vm.compensation.name"></span> <small>Climber Name:</small> <small ng-bind = "vm.compensation.climber"></small></h1>
+    <h4>Compensation Type: </h4><div ng-bind="vm.compensation.type"></div>
+  </div>
+
+  <div class="pull-right"
+       ng-show="vm.compensation.isCurrentUserOwner">
+    <a class="btn btn-primary"
+       ui-sref="compensations.edit({ compensationId: vm.compensation._id })">
+      <i class="glyphicon glyphicon-edit"></i>
+    </a>
+    <a class="btn btn-primary" ng-click="vm.remove()">
+      <i class="glyphicon glyphicon-trash"></i>
+    </a>
+  </div>
+  <small>
+    <em class="text-muted">
+      Posted on
+      <span ng-bind="vm.compensation.created | date:'mediumDate'"></span>
+      by
+      <span ng-if="vm.compensation.user"
+            ng-bind="vm.compensation.user.displayName"></span>
+      <span ng-if="!vm.compensation.user">Deleted User</span>
+    </em>
+  </small>
+  <p class="lead" ng-bind="vm.compensation.content"></p>
+</section>
