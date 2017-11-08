@@ -12,11 +12,11 @@ var path = require('path'),
 /**
  * Create a Compensation
  */
-exports.create = function(req, res) {
+exports.create = function (req, res) {
   var compensation = new Compensation(req.body);
   compensation.user = req.user;
 
-  compensation.save(function(err) {
+  compensation.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -30,7 +30,7 @@ exports.create = function(req, res) {
 /**
  * Show the current Compensation
  */
-exports.read = function(req, res) {
+exports.read = function (req, res) {
   // convert mongoose document to JSON
   var compensation = req.compensation ? req.compensation.toJSON() : {};
 
@@ -44,12 +44,12 @@ exports.read = function(req, res) {
 /**
  * Update a Compensation
  */
-exports.update = function(req, res) {
+exports.update = function (req, res) {
   var compensation = req.compensation;
 
   compensation = _.extend(compensation, req.body);
 
-  compensation.save(function(err) {
+  compensation.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -63,10 +63,10 @@ exports.update = function(req, res) {
 /**
  * Delete an Compensation
  */
-exports.delete = function(req, res) {
+exports.delete = function (req, res) {
   var compensation = req.compensation;
 
-  compensation.remove(function(err) {
+  compensation.remove(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -80,8 +80,8 @@ exports.delete = function(req, res) {
 /**
  * List of Compensations
  */
-exports.list = function(req, res) {
-  Compensation.find().sort('-created').populate('user', 'displayName').exec(function(err, compensations) {
+exports.list = function (req, res) {
+  Compensation.find().sort('-created').populate('user', 'displayName').exec(function (err, compensations) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -95,7 +95,7 @@ exports.list = function(req, res) {
 /**
  * Compensation middleware
  */
-exports.compensationByID = function(req, res, next, id) {
+exports.compensationByID = function (req, res, next, id) {
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).send({

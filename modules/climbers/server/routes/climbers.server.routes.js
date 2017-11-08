@@ -6,7 +6,7 @@
 var climbersPolicy = require('../policies/climbers.server.policy'),
   climbers = require('../controllers/climbers.server.controller');
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Climbers Routes
   app.route('/api/climbers').all(climbersPolicy.isAllowed)
     .get(climbers.list)
