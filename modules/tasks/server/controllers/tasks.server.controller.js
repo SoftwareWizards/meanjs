@@ -11,13 +11,13 @@ var path = require('path'),
 /**
  * Create a Task
  */
-exports.create = function(req, res) {
+exports.create = function (req, res) {
 
   var task = new Task(req.body);
 
   task.user = req.user;
 
-  task.save(function(err) {
+  task.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -31,7 +31,7 @@ exports.create = function(req, res) {
 /**
  * Show the current Task
  */
-exports.read = function(req, res) {
+exports.read = function (req, res) {
   // convert mongoose document to JSON
   var task = req.task ? req.task.toJSON() : {};
 
@@ -46,17 +46,17 @@ exports.read = function(req, res) {
 /**
  * Update a Task
  */
-exports.update = function(req, res) {
+exports.update = function (req, res) {
   var task = req.task;
 
-  task.title = req.body.title;
-  task.completionDate = req.body.completionDate;
+  task.name = req.body.name;
+  // task.completionDate = req.body.completionDate;
   task.skillLevel = req.body.skillLevel;
-  task.taskType = req.body.taskType;
-  task.instructions = req.body.instructions;
+  task.type = req.body.type;
+  // task.instructions = req.body.instructions;
   task.updated_at = new Date();
 
-  task.save(function(err) {
+  task.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -70,10 +70,10 @@ exports.update = function(req, res) {
 /**
  * Delete an Task
  */
-exports.delete = function(req, res) {
+exports.delete = function (req, res) {
   var task = req.task;
 
-  task.remove(function(err) {
+  task.remove(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -87,7 +87,7 @@ exports.delete = function(req, res) {
 /**
  * List of Tasks
  */
-exports.list = function(req, res) {
+exports.list = function (req, res) {
   Task.find({}, '-createdBy -updated -updatedBy').sort('-created').populate('task', 'title').exec(function (err, tasks) {
     if (err) {
       return res.status(400).send({
@@ -102,7 +102,7 @@ exports.list = function(req, res) {
 /**
  * Task middleware
  */
-exports.taskByID = function(req, res, next, id) {
+exports.taskByID = function (req, res, next, id) {
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).send({

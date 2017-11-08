@@ -3,12 +3,11 @@
 /**
  * Module dependencies
  */
-var path = require('path'),
+var Task = require('mongoose').model('Task'),
+  path = require('path'),
   config = require(path.resolve('./config/config'));
 
 /**
  * Tasks module init function.
  */
-module.exports = function (app, db) {
 
-};
