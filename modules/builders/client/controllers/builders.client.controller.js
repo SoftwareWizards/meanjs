@@ -8,7 +8,7 @@
 
   BuildersController.$inject = ['$scope', '$state', '$window', 'Authentication', 'builderResolve'];
 
-  function BuildersController ($scope, $state, $window, Authentication, builder) {
+  function BuildersController($scope, $state, $window, Authentication, builder) {
     var vm = this;
 
     vm.authentication = Authentication;

@@ -3,13 +3,40 @@
 
   angular
     .module('tasks')
-    .controller('TasksListController', TasksListController);
+    .controller('TaskListController', TaskListController);
 
-  TasksListController.$inject = ['TasksService'];
+  TaskListController.$inject = ['$scope', '$filter', 'TaskService'];
 
-  function TasksListController(TasksService) {
+  function TaskListController($scope, $filter, TaskService) {
     var vm = this;
+    vm.buildPager = buildPager;
+    vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
+    vm.pageChanged = pageChanged;
 
-    vm.tasks = TasksService.query();
+    TaskService.query(function (data) {
+      vm.tasks = data;
+      vm.buildPager();
+    });
+
+    function buildPager() {
+      vm.pagedItems = [];
+      vm.itemsPerPage = 15;
+      vm.currentPage = 1;
+      vm.figureOutItemsToDisplay();
+    }
+
+    function figureOutItemsToDisplay() {
+      vm.filteredItems = $filter('filter')(vm.tasks, {
+        $: vm.search
+      });
+      vm.filterLength = vm.filteredItems.length;
+      var begin = ((vm.currentPage - 1) * vm.itemsPerPage);
+      var end = begin + vm.itemsPerPage;
+      vm.pagedItems = vm.filteredItems.slice(begin, end);
+    }
+
+    function pageChanged() {
+      vm.figureOutItemsToDisplay();
+    }
   }
 }());

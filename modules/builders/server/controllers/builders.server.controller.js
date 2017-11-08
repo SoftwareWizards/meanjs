@@ -12,11 +12,11 @@ var path = require('path'),
 /**
  * Create a Builder
  */
-exports.create = function(req, res) {
+exports.create = function (req, res) {
   var builder = new Builder(req.body);
   builder.user = req.user;
 
-  builder.save(function(err) {
+  builder.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -30,7 +30,7 @@ exports.create = function(req, res) {
 /**
  * Show the current Builder
  */
-exports.read = function(req, res) {
+exports.read = function (req, res) {
   // convert mongoose document to JSON
   var builder = req.builder ? req.builder.toJSON() : {};
 
@@ -44,12 +44,12 @@ exports.read = function(req, res) {
 /**
  * Update a Builder
  */
-exports.update = function(req, res) {
+exports.update = function (req, res) {
   var builder = req.builder;
 
   builder = _.extend(builder, req.body);
 
-  builder.save(function(err) {
+  builder.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -63,10 +63,10 @@ exports.update = function(req, res) {
 /**
  * Delete an Builder
  */
-exports.delete = function(req, res) {
+exports.delete = function (req, res) {
   var builder = req.builder;
 
-  builder.remove(function(err) {
+  builder.remove(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -80,8 +80,8 @@ exports.delete = function(req, res) {
 /**
  * List of Builders
  */
-exports.list = function(req, res) {
-  Builder.find().sort('-created').populate('user', 'displayName').exec(function(err, builders) {
+exports.list = function (req, res) {
+  Builder.find().sort('-created').populate('user', 'displayName').exec(function (err, builders) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -95,7 +95,7 @@ exports.list = function(req, res) {
 /**
  * Builder middleware
  */
-exports.builderByID = function(req, res, next, id) {
+exports.builderByID = function (req, res, next, id) {
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).send({

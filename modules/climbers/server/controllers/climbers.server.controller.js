@@ -12,11 +12,11 @@ var path = require('path'),
 /**
  * Create a Climber
  */
-exports.create = function(req, res) {
+exports.create = function (req, res) {
   var climber = new Climber(req.body);
   climber.user = req.user;
 
-  climber.save(function(err) {
+  climber.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -30,7 +30,7 @@ exports.create = function(req, res) {
 /**
  * Show the current Climber
  */
-exports.read = function(req, res) {
+exports.read = function (req, res) {
   // convert mongoose document to JSON
   var climber = req.climber ? req.climber.toJSON() : {};
 
@@ -44,12 +44,12 @@ exports.read = function(req, res) {
 /**
  * Update a Climber
  */
-exports.update = function(req, res) {
+exports.update = function (req, res) {
   var climber = req.climber;
 
   climber = _.extend(climber, req.body);
 
-  climber.save(function(err) {
+  climber.save(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -63,10 +63,10 @@ exports.update = function(req, res) {
 /**
  * Delete an Climber
  */
-exports.delete = function(req, res) {
+exports.delete = function (req, res) {
   var climber = req.climber;
 
-  climber.remove(function(err) {
+  climber.remove(function (err) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -80,8 +80,8 @@ exports.delete = function(req, res) {
 /**
  * List of Climbers
  */
-exports.list = function(req, res) {
-  Climber.find().sort('-created').populate('user', 'displayName').exec(function(err, climbers) {
+exports.list = function (req, res) {
+  Climber.find().sort('-created').populate('user', 'displayName').exec(function (err, climbers) {
     if (err) {
       return res.status(400).send({
         message: errorHandler.getErrorMessage(err)
@@ -95,7 +95,7 @@ exports.list = function(req, res) {
 /**
  * Climber middleware
  */
-exports.climberByID = function(req, res, next, id) {
+exports.climberByID = function (req, res, next, id) {
 
   if (!mongoose.Types.ObjectId.isValid(id)) {
     return res.status(400).send({

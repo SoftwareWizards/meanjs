@@ -6,7 +6,7 @@
 var compensationsPolicy = require('../policies/compensations.server.policy'),
   compensations = require('../controllers/compensations.server.controller');
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Compensations Routes
   app.route('/api/compensations').all(compensationsPolicy.isAllowed)
     .get(compensations.list)
