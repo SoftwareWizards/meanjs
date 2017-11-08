@@ -1,96 +1,64 @@
 (function () {
   'use strict';
 
+  // Setting up route
   angular
-    .module('tasks')
+    .module('tasks.routes')
     .config(routeConfig);
 
   routeConfig.$inject = ['$stateProvider'];
 
   function routeConfig($stateProvider) {
     $stateProvider
-      .state('tasks', {
-        abstract: true,
+      .state('builder.task-add', {
+        url: '/tasks/add',
+        templateUrl: 'modules/tasks/client/views/add-task.client.view.html',
+        controller: 'TaskController',
+        controllerAs: 'vm',
+        data: {
+          roles: ['builder', 'admin'],
+          pageTitle: 'Build Tasks'
+        }
+      })
+      .state('builder.tasks', {
         url: '/tasks',
-        template: '<ui-view/>'
-      })
-      .state('tasks.list', {
-        url: '',
         templateUrl: 'modules/tasks/client/views/list-tasks.client.view.html',
-        controller: 'TasksListController',
-        controllerAs: 'vm',
-        data: {
-          pageTitle: 'Tasks List'
-        }
+        controller: 'TaskListController',
+        controllerAs: 'vm'
       })
-      .state('tasks.create', {
-        url: '/create',
-        templateUrl: 'modules/tasks/client/views/form-task.client.view.html',
-        controller: 'TasksController',
+      .state('builder.task', {
+        url: '/tasks/:taskId',
+        templateUrl: '/modules/tasks/client/views/view-task.client.view.html',
+        controller: 'TaskController',
         controllerAs: 'vm',
         resolve: {
-          taskResolve: newTask
+          userResolve: getTask
         },
         data: {
-          roles: ['user', 'admin'],
-          pageTitle: 'Tasks Create'
+          roles: ['builder', 'admin'],
+          pageTitle: '{{ taskResolve.displayName }}'
         }
       })
-      .state('tasks.edit', {
-        url: '/:taskId/edit',
-        templateUrl: 'modules/tasks/client/views/form-task.client.view.html',
-        controller: 'TasksController',
+      .state('builder.task-edit', {
+        url: '/tasks/:taskId/edit',
+        templateUrl: 'modules/tasks/client/views/edit-task.client.view.html',
+        controller: 'TaskController',
         controllerAs: 'vm',
         resolve: {
           taskResolve: getTask
         },
         data: {
-          roles: ['user', 'admin'],
-          pageTitle: 'Edit Task {{ taskResolve.name }}'
-        }
-      })
-      /*send climber compensation route
-      .state('tasks.send', {
-        url: '/:taskId/send',
-        templateUrl: 'modules/tasks/client/views/form-task.client.view.html',
-        controller: 'TasksController',
-        controllerAs: 'vm',
-        resolve: {
-          taskResolve: getTask
-        },
-        data: {
-          roles: ['user', 'admin'],
-          pageTitle: 'Send Climber Compensation {{ taskResolve.name }}'
-        }
-      })
-
-      end*/
-
-      .state('tasks.view', {
-        url: '/:taskId',
-        templateUrl: 'modules/tasks/client/views/view-task.client.view.html',
-        controller: 'TasksController',
-        controllerAs: 'vm',
-        resolve: {
-          taskResolve: getTask
-        },
-        data: {
-          pageTitle: 'Task {{ taskResolve.name }}'
+          roles: ['builder', 'admin'],
+          pageTitle: '{{ taskResolve.displayName }}'
         }
       });
   }
 
-  getTask.$inject = ['$stateParams', 'TasksService'];
+  getTask.$inject = ['$stateParams', 'TaskService'];
 
   function getTask($stateParams, TasksService) {
     return TasksService.get({
       taskId: $stateParams.taskId
     }).$promise;
-  }
-
-  newTask.$inject = ['TasksService'];
-
-  function newTask(TasksService) {
-    return new TasksService();
   }
 }());
