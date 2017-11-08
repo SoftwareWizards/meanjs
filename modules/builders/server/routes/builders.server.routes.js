@@ -6,7 +6,7 @@
 var buildersPolicy = require('../policies/builders.server.policy'),
   builders = require('../controllers/builders.server.controller');
 
-module.exports = function(app) {
+module.exports = function (app) {
   // Builders Routes
   app.route('/api/builders').all(buildersPolicy.isAllowed)
     .get(builders.list)
