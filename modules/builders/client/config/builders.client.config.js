@@ -20,14 +20,15 @@
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'builders', {
       title: 'List Builders',
-      state: 'builders.list'
+      state: 'builders.list',
+      roles: ['admin']
     });
 
     // Add the dropdown create item
     menuService.addSubMenuItem('topbar', 'builders', {
-      title: 'Create Builder',
+      title: 'Manage Builder',
       state: 'builders.create',
-      roles: ['user']
+      roles: ['admin']
     });
   }
 }());

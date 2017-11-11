@@ -19,14 +19,15 @@
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'compensations', {
       title: 'List Compensations',
-      state: 'compensations.list'
+      state: 'compensations.list',
+      roles: ['*']
     });
 
     // Add the dropdown create item
     menuService.addSubMenuItem('topbar', 'compensations', {
       title: 'Create Compensation',
       state: 'compensations.create',
-      roles: ['*']
+      roles: ['admin', 'builder']
     });
   }
 }());

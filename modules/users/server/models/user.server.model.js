@@ -124,15 +124,18 @@ var UserSchema = new Schema({
   },
   providerData: {},
   additionalProvidersData: {},
+
+
   roles: {
     type: [{
       type: String,
       //added builder and climber here
       enum: ['user', 'admin', 'builder', 'climber']
     }],
-    default: ['user'],
+    //default: ['user'],
     required: 'Please provide at least one role'
   },
+
   updated: {
     type: Date
   },

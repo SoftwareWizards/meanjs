@@ -19,14 +19,15 @@
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'tasks', {
       title: 'List Tasks',
-      state: 'tasks.list'
+      state: 'tasks.list',
+      roles: ['*']
     });
 
     // Add the dropdown create item
     menuService.addSubMenuItem('topbar', 'tasks', {
       title: 'Create Task',
       state: 'tasks.create',
-      roles: ['*']
+      roles: ['admin', 'builder']
     });
   }
 }());
