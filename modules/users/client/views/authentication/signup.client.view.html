@@ -1,5 +1,5 @@
 <div>
-  <h3 class="col-xs-12 text-center">Or sign up using your email</h3>
+  <h3 class="col-xs-12 text-center">Sign up using your email</h3>
   <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
     <form name="vm.userForm" ng-submit="vm.signup(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
       <fieldset>
@@ -17,6 +17,42 @@
             <p class="help-block error-text" ng-message="required">Last name is required.</p>
           </div>
         </div>
+        <!--gender-->
+        <div class="form-group" show-errors>
+          <label for="gender">Gender </label>
+          <select type="text" id="gender" name="gender" class="form-control" ng-model="vm.credentials.gender" required>
+            <option value=""> --- Please Select --- </option>
+            <option value="Male"> Male </option>
+            <option value="Female"> Female </option>
+            <option value="Prefer Not to Say"> Prefer Not to Say</option>
+          </select>
+          </div>
+        <!--end gender-->
+
+        <!--age-->
+        <div class="form-group" show-errors>
+          <label for="gender">Age </label>
+          <select type="text" id="age" name="age" class="form-control" ng-model="vm.credentials.age" required>
+            <option value=""> --- Please Select --- </option>
+            <option value="18-24"> 18-24 </option>
+            <option value="25-29"> 25-29 </option>
+            <option value="30-34"> 25-29 </option>
+            <option value="35-39"> 25-29 </option>
+            <option value="40-44"> 25-29 </option>
+            <option value="45-49"> 25-29 </option>
+            <option value="50-54"> 25-29 </option>
+            <option value="55+"> 55+ </option>
+          </select>
+        </div>
+        <!--end age-->
+
+        <!-- phone number -->
+        <div class="form-group" show-errors>
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" class="form-control" ng-model="vm.credentials.phone" placeholder="Phone Number" required>
+          </div>
+        <!-- end phone number -->
+
         <div class="form-group" show-errors>
           <label for="email">Email</label>
           <input type="email" id="email" name="email" class="form-control" ng-model="vm.credentials.email" placeholder="Email" lowercase required>
@@ -25,6 +61,29 @@
             <p class="help-block error-text" ng-message="email">Email address is invalid.</p>
           </div>
         </div>
+        <!--preferred contact-->
+        <div class="form-group" show-errors>
+          <label for="prefer">Prefer contact by phone or email? </label>
+          <select type="text" id="prefer" name="prefer" class="form-control" ng-model="vm.credentials.prefer" required>
+            <option value=""> --- Please Select --- </option>
+            <option value="Phone"> Phone </option>
+            <option value="Email"> Email </option>
+          </select>
+        </div>
+        <!--end preferred contact-->
+
+        <!--ifPhone-->
+        <div class="form-group" show-errors>
+          <label for="ifPhone">Gender </label>
+          <select type="text" id="ifPhone" name="ifPhone" class="form-control" ng-model="vm.credentials.ifPhone" required>
+            <option value=""> --- Please Select --- </option>
+            <option value="Text"> Text </option>
+            <option value="Call"> Call </option>
+            <option value="No Preference"> No Preference </option>
+          </select>
+        </div>
+        <!--end gender-->
+
         <div class="form-group" show-errors>
           <label for="username">Username</label>
           <input type="text" id="username" name="username" class="form-control" ng-model="vm.credentials.username" ng-pattern="vm.usernameRegex" placeholder="Username" lowercase required>

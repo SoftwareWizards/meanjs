@@ -68,6 +68,26 @@ var UserSchema = new Schema({
     type: String,
     trim: true
   },
+  gender: {
+    type: String,
+    trim: true
+  },
+  age: {
+    type: String,
+    trim: true
+  },
+  phone: {
+    type: String,
+    trim: true
+  },
+  prefer: {
+    type: String,
+    trim: true
+  },
+  ifPhone: {
+    type: String,
+    trim: true
+  },
   email: {
     type: String,
     index: {
@@ -107,7 +127,8 @@ var UserSchema = new Schema({
   roles: {
     type: [{
       type: String,
-      enum: ['user', 'admin']
+      //added builder and climber here
+      enum: ['user', 'admin', 'builder', 'climber']
     }],
     default: ['user'],
     required: 'Please provide at least one role'
