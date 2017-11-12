@@ -88,6 +88,26 @@ var UserSchema = new Schema({
     type: String,
     trim: true
   },
+  builderquestion: {
+    type: String,
+    trim: true
+  },
+  climberquestion: {
+    type: String,
+    trim: true
+  },
+  address: {
+    type: String,
+    trim: true
+  },
+  city: {
+    type: String,
+    trim: true
+  },
+  state: {
+    type: String,
+    trim: true
+  },
   email: {
     type: String,
     index: {

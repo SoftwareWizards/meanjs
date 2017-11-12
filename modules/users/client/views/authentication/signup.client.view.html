@@ -92,7 +92,7 @@
             <option value="No Preference"> No Preference </option>
           </select>
         </div>
-        <!--end gender-->
+        <!--end ifPhone-->
 
         <div class="form-group" show-errors>
           <label for="username">Username</label>
@@ -116,6 +116,101 @@
           <label>Password Requirements</label>
           <uib-progressbar value="requirementsProgress" type="{{requirementsColor}}"><span style="color:white; white-space:nowrap;">{{requirementsProgress}}%</span></uib-progressbar>
         </div>
+
+        <h3> Are you a Builder or Climber? </h3>
+        <!-- builder? -->
+        <div class="form-group" show-errors>
+          <label for="builderquestion"> Builder </label>
+          <input type="checkbox" id="builderquestion" name="builderquestion" class="form-control" ng-model="vm.credentials.builderquestion" ng-init = "builderquestion=true"> </input>
+        </div>
+        <!-- end builder? -->
+
+        <!-- climber? -->
+        <div class="form-group" show-errors>
+          <label for="climberquestion"> Climber </label>
+          <input type="checkbox" id="climberquestion" name="climberquestion" class="form-control" ng-model="vm.credentials.climberquestion" ng-init = "climberquestion=true"> </input>
+        </div>
+        <!-- end climber? -->
+
+        <!--billing address -->
+        <h4> Billing Street Address</h4>
+        <div class="form-group" show-errors>
+          <span ng-hide="vm.credentials.climberquestion">
+          <input type="text" id="address" name="address" class="form-control" ng-model="vm.credentials.address" placeholder="Street Address" required>
+          </input>
+            </span>
+        </div>
+        <!--end billing address -->
+        <!--city  -->
+
+        <div class="form-group" show-errors>
+          <span ng-hide="vm.credentials.climberquestion">
+          <input type="text" id="city" name="city" class="form-control" ng-model="vm.credentials.city" placeholder="City" required>
+            </input>
+            </span>
+        </div>
+        <!--end city -->
+        <!--state-->
+        <div class="form-group" show-errors>
+           <span ng-hide="vm.credentials.climberquestion">
+          <select type="text" id="state" name="state" class="form-control" ng-model="vm.credentials.state" required>
+            <option value=""> --- Please Select --- </option>
+            <option value="AK"> AK </option>
+            <option value="AL"> AL </option>
+            <option value="AR"> AR </option>
+            <option value="AZ"> AZ </option>
+            <option value="CA"> CA </option>
+            <option value="CO"> CO </option>
+            <option value="CT"> CT </option>
+            <option value="DC"> DC </option>
+            <option value="DE"> DE </option>
+            <option value="FL"> FL </option>
+            <option value="GA"> GA </option>
+            <option value="HI"> HI </option>
+            <option value="IA"> IA </option>
+            <option value="ID"> ID </option>
+            <option value="IL"> IL </option>
+            <option value="IN"> IN </option>
+            <option value="KS"> KS </option>
+            <option value="KY"> KY </option>
+            <option value="LA"> LA </option>
+            <option value="MA"> MA </option>
+            <option value="MD"> MD </option>
+            <option value="ME"> ME </option>
+            <option value="MI"> MI </option>
+            <option value="MN"> MN </option>
+            <option value="MO"> MO </option>
+            <option value="MS"> MS </option>
+            <option value="MT"> MT </option>
+            <option value="NC"> NC </option>
+            <option value="ND"> ND </option>
+            <option value="NE"> NE </option>
+            <option value="NH"> NH </option>
+            <option value="NJ"> NJ </option>
+            <option value="NM"> NM </option>
+            <option value="NV"> NV </option>
+            <option value="NY"> NY </option>
+            <option value="OH"> OH </option>
+            <option value="OK"> OK </option>
+            <option value="OR"> OR </option>
+            <option value="PA"> PA </option>
+            <option value="RI"> RI </option>
+            <option value="SC"> SC </option>
+            <option value="SD"> SD </option>
+            <option value="TN"> TN </option>
+            <option value="TX"> TX </option>
+            <option value="UT"> UT </option>
+            <option value="VA"> VA </option>
+            <option value="VT"> VT </option>
+            <option value="WA"> WA </option>
+            <option value="WI"> WI </option>
+            <option value="WV"> WV </option>
+            <option value="WY"> WY </option>
+          </select>
+           </span>
+        </div>
+        <!--end state-->
+
         <div class="text-center form-group">
           <button type="submit" class="btn btn-primary">Sign up</button>
           &nbsp; or&nbsp;
