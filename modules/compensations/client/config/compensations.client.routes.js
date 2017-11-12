@@ -20,6 +20,7 @@
         controller: 'CompensationsListController',
         controllerAs: 'vm',
         data: {
+          roles: ['user', 'admin', 'builder','climber'],
           pageTitle: 'Compensations List'
         }
       })
@@ -32,7 +33,7 @@
           compensationResolve: newCompensation
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['user', 'admin','builder'],
           pageTitle: 'Compensations Create'
         }
       })
@@ -45,7 +46,7 @@
           compensationResolve: getCompensation
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['user', 'admin', 'builder'],
           pageTitle: 'Edit Compensation {{ compensationResolve.name }}'
         }
       })

@@ -116,6 +116,35 @@ var UserSchema = new Schema({
     type: String,
     trim: true
   },
+  education: {
+    type: String,
+    trim: true
+  },
+  area: {
+    type: String,
+    trim: true
+  },
+  status: {
+    type: String,
+    trim: true
+  },
+  assistance: {
+    type: String,
+    trim: true
+  },
+  program: {
+    type: String,
+    trim: true
+  },
+  disability:{
+    type: String,
+    trim: true
+  },
+  income:{
+    type: String,
+    trim: true
+  },
+
   email: {
     type: String,
     index: {
@@ -160,8 +189,8 @@ var UserSchema = new Schema({
       //added builder and climber here
       enum: ['user', 'admin', 'builder', 'climber']
     }],
-    //default: ['user'],
-    required: 'Please provide at least one role'
+    default: ['user'],
+    //required: 'Please provide at least one role'
   },
 
   updated: {

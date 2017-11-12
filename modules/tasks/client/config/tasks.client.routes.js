@@ -20,6 +20,8 @@
         controller: 'TasksListController',
         controllerAs: 'vm',
         data: {
+          //added this line
+          roles: ['user', 'admin','builder', 'climber'],
           pageTitle: 'Tasks List'
         }
       })
@@ -32,7 +34,7 @@
           taskResolve: newTask
         },
         data: {
-          roles: ['user', 'admin'],
+          roles: ['user', 'admin','builder'],
           pageTitle: 'Tasks Create'
         }
       })
@@ -45,7 +47,8 @@
           taskResolve: getTask
         },
         data: {
-          roles: ['user', 'admin'],
+          //added this line
+          roles: ['user', 'admin', 'builder'],
           pageTitle: 'Edit Task {{ taskResolve.name }}'
         }
       })
@@ -58,6 +61,7 @@
           taskResolve: getTask
         },
         data: {
+          roles: ['user', 'admin','builder'],
           pageTitle: 'Task {{ taskResolve.name }}'
         }
       });
