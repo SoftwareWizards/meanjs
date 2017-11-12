@@ -108,6 +108,14 @@ var UserSchema = new Schema({
     type: String,
     trim: true
   },
+  zipcode: {
+    type: String,
+    trim: true
+  },
+  country: {
+    type: String,
+    trim: true
+  },
   email: {
     type: String,
     index: {

@@ -59,7 +59,7 @@
         <!-- phone number -->
         <div class="form-group" show-errors>
           <label for="phone">Phone Number</label>
-          <input type="text" id="phone" name="phone" class="form-control" ng-model="vm.credentials.phone" placeholder="Phone Number" required>
+          <input type="text" id="phone" name="phone" class="form-control" ng-model="vm.credentials.phone" placeholder="Phone Number" maxlength="10" required>
           </div>
         <!-- end phone number -->
 
@@ -133,28 +133,25 @@
         <!-- end climber? -->
 
         <!--billing address -->
-        <h4> Billing Street Address</h4>
+        <span ng-hide="vm.credentials.climberquestion">
+        <h4> Billing Address</h4>
         <div class="form-group" show-errors>
-          <span ng-hide="vm.credentials.climberquestion">
           <input type="text" id="address" name="address" class="form-control" ng-model="vm.credentials.address" placeholder="Street Address" required>
           </input>
-            </span>
         </div>
         <!--end billing address -->
         <!--city  -->
 
         <div class="form-group" show-errors>
-          <span ng-hide="vm.credentials.climberquestion">
           <input type="text" id="city" name="city" class="form-control" ng-model="vm.credentials.city" placeholder="City" required>
             </input>
-            </span>
         </div>
         <!--end city -->
         <!--state-->
         <div class="form-group" show-errors>
-           <span ng-hide="vm.credentials.climberquestion">
+
           <select type="text" id="state" name="state" class="form-control" ng-model="vm.credentials.state" required>
-            <option value=""> --- Please Select --- </option>
+            <option value=""> --- Select State --- </option>
             <option value="AK"> AK </option>
             <option value="AL"> AL </option>
             <option value="AR"> AR </option>
@@ -207,9 +204,31 @@
             <option value="WV"> WV </option>
             <option value="WY"> WY </option>
           </select>
-           </span>
         </div>
         <!--end state-->
+
+        <!-- zip code -->
+        <div class="form-group" show-errors>
+          <input type="text" id="zipcode" name="zipcode" class="form-control" ng-model="vm.credentials.zipcode" placeholder="Zip Code" maxlength="5" required>
+        </div>
+        <!-- end zip code -->
+
+        <!-- country -->
+        <div class="form-group" show-errors>
+          <input type="text" id="country" name="country" class="form-control" ng-model="vm.credentials.country" placeholder="Country" required>
+        </div>
+        </span>
+        <!-- end country -->
+        <span ng-hide="vm.credentials.builderquestion">
+          <h4> Demographics </h4>
+          <small>This form is for collecting demographic information. This information is not a used a qualifier for the use of this system. </small>
+
+
+
+
+
+
+        </span>
 
         <div class="text-center form-group">
           <button type="submit" class="btn btn-primary">Sign up</button>
