@@ -20,7 +20,9 @@
       <h4 class="list-group-item-heading" ng-bind="task.name"></h4>
     </a>
   </div>
+  <span ng-if="!task.climber">
   <div class="alert alert-warning text-center" ng-if="vm.tasks.$resolved && !vm.tasks.length">
     No Tasks yet, why don't you <a ui-sref="tasks.create">create one</a>?
   </div>
+    </span>
 </section>
