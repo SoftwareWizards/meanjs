@@ -16,6 +16,18 @@ var ClimberSchema = new Schema({
     required: 'Please fill Climber name',
     trim: true
   },
+  email: {
+    type: String,
+    default: '',
+    required: 'Please fill in your email',
+    trim: true
+  },
+  age:{
+    type:integer,
+    default: '',
+    required: 'Please fill in your age',
+    trim: true,
+  },
   created: {
     type: Date,
     default: Date.now
