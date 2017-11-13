@@ -1,5 +1,5 @@
 .content {
-  margin-top: 50px;
+  margin-top: 15%;
 }
 .undecorated-link:hover {
   text-decoration: none;
@@ -10,6 +10,54 @@
 .ng-cloak,
 .x-ng-cloak {
   display: none !important;
+}
+
+.jumbotron {
+	border-style: groove;
+	border-color: #ff0c51;
+	background-color: rgba(173, 41, 255, 0.21);
+
+}
+.highlight {
+	background-color: #ffdc00;
+	background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+}
+
+.testimonials {
+	position: left;
+	right: 40px;
+	width: 400px;
+	top: -50px;
+}
+
+.testwidth {
+	width: 500px;
+}
+
+.imgright {
+	position: absolute;
+	right: 50%;
+}
+
+.t2 {
+	position: relative;
+	right: 250px;
+	top: -85px;
+}
+
+.img-circle {
+	border: 1px solid black;
+	position: static;
+	right: 250px;
+}
+
+section {
+	border-color: #7fff27;
+	background-color: #00ffcc;
+}
+
+body {
+	background-color: #00ffcc;
 }
 .header-profile-image {
   border-radius: 50%;
@@ -35,6 +83,28 @@ a:hover .header-profile-image {
 .error-text {
   display: none;
 }
+/************ BEGIN MODS ***********/
+
+.navbar-inverse {
+	background-image: -webkit-linear-gradient(top, rgba(172, 51, 221, 0.25) 0%, #84ccc3 100%);
+	background-image: -o-linear-gradient(top, #912416 0%, #f6ff00 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#9e354a), to(#25ff00));
+	background-image: linear-gradient(to bottom, #003840 0%, #003840 100%);
+	background-color: #222;
+	border-color: #003840;
+}
+
+
+.navbar-inverse .navbar-brand {
+	color: #d9eaff;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	text-shadow: 0 -1px 0 blue;
+}
+
+/************** END MODS *************/
+
 .has-error .help-block.error-text {
   display: block;
 }
