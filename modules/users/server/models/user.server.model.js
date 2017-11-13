@@ -120,6 +120,12 @@ var UserSchema = new Schema({
     type: String,
     trim: true
   },
+
+  transport: {
+    type: String,
+    trim: true
+  },
+
   area: {
     type: String,
     trim: true
@@ -136,11 +142,72 @@ var UserSchema = new Schema({
     type: String,
     trim: true
   },
-  disability:{
+
+  disability: {
     type: String,
     trim: true
   },
-  income:{
+  income: {
+    type: String,
+    trim: true
+  },
+  industry1: {
+    type: String,
+    trim: true
+  },
+  industry2: {
+    type: String,
+    trim: true
+  },
+  skills: {
+    type: String,
+    trim: true
+  },
+  acquireskills:  {
+    type: String,
+    trim: true
+  },
+  explain:  {
+    type: String,
+    trim: true
+  },
+  payment:  {
+    type: String,
+    trim: true
+  },
+  addressclimber:  {
+    type: String,
+    trim: true
+  },
+  cityclimber: {
+    type: String,
+    trim: true
+  },
+  stateclimber: {
+    type: String,
+    trim: true
+  },
+  zipcodeclimber: {
+    type: String,
+    trim: true
+  },
+  countryclimber: {
+    type: String,
+    trim: true
+  },
+  nameOnAccount: {
+    type: String,
+    trim: true
+  },
+  accountNumber: {
+    type: String,
+    trim: true
+  },
+  paypalemail: {
+    type: String,
+    trim: true
+  },
+  paypalphone: {
     type: String,
     trim: true
   },
@@ -190,6 +257,7 @@ var UserSchema = new Schema({
       enum: ['user', 'admin', 'builder', 'climber']
     }],
     default: ['user']
+
     //required: 'Please provide at least one role'
   },
 

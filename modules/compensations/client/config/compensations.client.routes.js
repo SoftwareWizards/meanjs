@@ -33,7 +33,9 @@
           compensationResolve: newCompensation
         },
         data: {
-          roles: ['user', 'admin','builder'],
+
+          roles: ['user', 'admin', 'builder'],
+
           pageTitle: 'Compensations Create'
         }
       })
