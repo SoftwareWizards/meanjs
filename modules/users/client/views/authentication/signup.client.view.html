@@ -1,4 +1,4 @@
-<div>
+<div xmlns="http://www.w3.org/1999/html">
   <h3 class="col-xs-12 text-center">Sign up using your email</h3>
   <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
     <form name="vm.userForm" ng-submit="vm.signup(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
@@ -46,11 +46,11 @@
             <option value=""> --- Please Select --- </option>
             <option value="18-24"> 18-24 </option>
             <option value="25-29"> 25-29 </option>
-            <option value="30-34"> 25-29 </option>
-            <option value="35-39"> 25-29 </option>
-            <option value="40-44"> 25-29 </option>
-            <option value="45-49"> 25-29 </option>
-            <option value="50-54"> 25-29 </option>
+            <option value="30-34"> 30-34 </option>
+            <option value="35-39"> 35-39 </option>
+            <option value="40-44"> 40-44 </option>
+            <option value="45-49"> 45-49 </option>
+            <option value="50-54"> 50-54 </option>
             <option value="55+"> 55+ </option>
           </select>
         </div>
@@ -223,12 +223,498 @@
           <h4> Demographics </h4>
           <small>This form is for collecting demographic information. This information is not a used a qualifier for the use of this system. </small>
 
+          <div class="form-group" show-errors>
+          <label for="education"> Highest level of education completed? </label>
+          <select type="text" id="education" name="education" class="form-control" ng-model="vm.credentials.education">
+            <option value=""> --- Please Select --- </option>
+            <option value="High School(no diploma)"> High School(no diploma) </option>
+            <option value="High School Diploma/GED Equivalent"> High School Diploma/GED Equivalent </option>
+            <option value="Some College"> Some College </option>
+            <option value="Associate Degree/Vocational Degree Equivalent"> Associate Degree/Vocational Degree Equivalent </option>
+            <option value="Bachelors"> Bachelors </option>
+            <option value="Masters +"> Masters + </option>
+          </select>
+        </div>
+          <!--end education-->
+          <!--transport-->
+        <div class="form-group" show-errors>
+          <label for="transport"> Do you have or are you able to find transportation if a task requires it? </label>
+          <select type="text" id="transport" name="transport" class="form-control" ng-model="vm.credentials.transport">
+            <option value=""> --- Please Select --- </option>
+            <option value="Yes"> Yes </option>
+            <option value="No"> No </option>
+          </select>
+        </div>
+          <!--end transport-->
+          <!--area-->
+        <div class="form-group" show-errors>
+          <label for="area"> What kind of area do you live in? </label>
+          <select type="text" id="area" name="area" class="form-control" ng-model="vm.credentials.area">
+            <option value=""> --- Please Select --- </option>
+            <option value="Rural"> Rural </option>
+            <option value="Urban/Metro"> Urban/Metro </option>
+            <option value="Suburban"> Suburban </option>
+            <option value="Other"> Other </option>
+          </select>
+        </div>
+          <!--end area-->
+
+          <!--status-->
+        <div class="form-group" show-errors>
+          <label for="status"> Employment Status </label>
+          <select type="text" id="status" name="status" class="form-control" ng-model="vm.credentials.status">
+            <option value=""> --- Please Select --- </option>
+            <option value="Employed for wages"> Employed for wages </option>
+            <option value="Self-employed"> Self-employed </option>
+            <option value="Out of work and looking for work"> Out of work and looking for work </option>
+            <option value="Out of work but not currently looking for work"> Out of work but not currently looking for work </option>
+            <option value="Homemaker"> Homemaker </option>
+            <option value="Student"> Student </option>
+            <option value="Military"> Military </option>
+            <option value="Retired"> Retired </option>
+            <option value="Unable to work"> Unable to work </option>
+          </select>
+        </div>
+          <!--end status-->
+          <!--assistance-->
+        <div class="form-group" show-errors>
+          <label for="assistance"> Do you receive public or government assistance? </label>
+          <select type="text" id="assistance" name="assistance" class="form-control" ng-model="vm.credentials.assistance">
+            <option value=""> --- Please Select --- </option>
+            <option value="Yes"> Yes </option>
+            <option value="No"> No </option>
+          </select>
+        </div>
+          <!--end assistance-->
+          <!--program-->
+        <div class="form-group" show-errors>
+          <label for="program"> Do you receive public or government assistance? </label>
+          <input type="text" id="program" name="program" class="form-control" ng-model="vm.credentials.program" placeholder="Agency or Program Name">
+          </input>
+        </div>
+          <!--end program-->
+
+          <!--disability-->
+        <div class="form-group" show-errors>
+          <label for="disability"> Are you on disability? </label>
+          <select type="text" id="disability" name="disability" class="form-control" ng-model="vm.credentials.disability">
+            <option value=""> --- Please Select --- </option>
+            <option value="Yes"> Yes </option>
+            <option value="No"> No </option>
+          </select>
+        </div>
+          <!--end disability-->
+
+          <!--income-->
+        <div class="form-group" show-errors>
+          <label for="income"> Annual Income </label>
+          <select type="text" id="income" name="income" class="form-control" ng-model="vm.credentials.income">
+            <option value=""> --- Please Select --- </option>
+            <option value="Less than $10,000"> Less than $10,000 </option>
+            <option value="$10,000 to $19,999"> $10,000 to $19,999 </option>
+            <option value="$20,000 to $29,999"> $20,000 to $29,999 </option>
+            <option value="$30,000 to $39,999"> $30,000 to $39,999 </option>
+            <option value="$40,000 to $49,999"> $40,000 to $49,999 </option>
+            <option value="$50,000 to $59,999"> $50,000 to $59,999 </option>
+            <option value="$60,000 to $69,999"> $60,000 to $69,999 </option>
+            <option value="$70,000 to $79,999"> $70,000 to $79,999 </option>
+            <option value="$80,000 to $89,999"> $80,000 to $89,999 </option>
+            <option value="$90,000 to $99,999"> $90,000 to $99,999 </option>
+            <option value="$100,000 to $149,999"> $100,000 to $149,999 </option>
+            <option value="$150,000 or more"> $150,000 or more</option>
+          </select>
+        </div>
+          <!--end income-->
+
+          <h4> Skills </h4>
+          <small> Use this section to tell us a little bit about yourself and the things you do. </small>
+
+          <h4> Task Category </h4>
+          <small> Please select the industry you most recently worked in.  </small>
+
+          <!--industry1-->
+        <div class="form-group" show-errors>
+
+          <select type="text" id="industry1" name="industry1" class="form-control" ng-model="vm.credentials.industry1">
+            <option value=""> --- Select Industry --- </option>
+            <option value="Accounting"> Accounting </option>
+            <option value="General Business"> General Business </option>
+            <option value="Admin and Clerical"> Admin and Clerical </option>
+            <option value="General Labor"> General Labor </option>
+            <option value="Pharmaceutical"> Pharmaceutical </option>
+            <option value="Automotive"> Automotive </option>
+            <option value="Banking"> Banking </option>
+            <option value="Grocery"> Grocery </option>
+            <option value="Purchasing-Procurement"> Purchasing-Procurement </option>
+            <option value="Biotech"> Biotech </option>
+            <option value="Health Care"> Health Care </option>
+            <option value="Quality Assurance"> Quality Assurance </option>
+            <option value="Quality Control"> Quality Control </option>
+            <option value="Broadcast"> Broadcast </option>
+            <option value="Journalism"> Journalism </option>
+            <option value="Hotel-Hospitality"> Hotel-Hospitality </option>
+            <option value="Real Estate"> Real Estate </option>
+            <option value="Business Development"> Business Development </option>
+            <option value="Human Resources"> Human Resources </option>
+            <option value="Research"> Research </option>
+            <option value="Construction"> Construction </option>
+            <option value="Information Technology"> Information Technology </option>
+            <option value="Restaurant-Food Service"> Restaurant-Food Service </option>
+            <option value="Consultant"> Consultant </option>
+            <option value="Installation- Maint- Repair"> Installation- Maint- Repair </option>
+            <option value="Retail/Customer Service"> Retail/Customer Service </option>
+            <option value="Insurance"> Insurance </option>
+            <option value="Sales"> Sales </option>
+            <option value="Design"> Design </option>
+            <option value="Inventory"> Inventory </option>
+            <option value="Science"> Science </option>
+            <option value="Distribution-Shipping"> Distribution-Shipping </option>
+            <option value="Legal"> Legal </option>
+            <option value="Skilled Labor- Trades"> Skilled Labor- Trades </option>
+            <option value="Education"> Education </option>
+            <option value="Teaching"> Teaching </option>
+            <option value="Legal Admin"> Legal Admin </option>
+            <option value="Strategy"> Strategy </option>
+            <option value="Planning"> Planning </option>
+            <option value="Engineering"> Engineering </option>
+            <option value="Management"> Management </option>
+            <option value="Supply Chain"> Supply Chain </option>
+            <option value="Manufacturing"> Manufacturing </option>
+            <option value="Telecommunications"> Telecommunications </option>
+            <option value="Executive"> Executive </option>
+            <option value="Marketing"> Marketing </option>
+            <option value="Training"> Training </option>
+            <option value="Facilities"> Facilities </option>
+            <option value="Media- Journalism- Newspaper"> Media- Journalism- Newspaper </option>
+            <option value="Transportation"> Transportation </option>
+            <option value="Finance"> Finance </option>
+            <option value="Nonprofit - Social Services"> Nonprofit - Social Services </option>
+            <option value="Warehouse"> Warehouse </option>
+            <option value="Franchise"> Franchise </option>
+          </select>
+        </div>
+          <!--end industry1-->
+
+          <small> Please select the second most recent industry you worked in.  </small>
+
+          <!--industry2-->
+        <div class="form-group" show-errors>
+
+          <select type="text" id="industry2" name="industry2" class="form-control" ng-model="vm.credentials.industry2">
+            <option value=""> --- Select Industry --- </option>
+            <option value="Accounting"> Accounting </option>
+            <option value="General Business"> General Business </option>
+            <option value="Admin and Clerical"> Admin and Clerical </option>
+            <option value="General Labor"> General Labor </option>
+            <option value="Pharmaceutical"> Pharmaceutical </option>
+            <option value="Automotive"> Automotive </option>
+            <option value="Banking"> Banking </option>
+            <option value="Grocery"> Grocery </option>
+            <option value="Purchasing-Procurement"> Purchasing-Procurement </option>
+            <option value="Biotech"> Biotech </option>
+            <option value="Health Care"> Health Care </option>
+            <option value="Quality Assurance"> Quality Assurance </option>
+            <option value="Quality Control"> Quality Control </option>
+            <option value="Broadcast"> Broadcast </option>
+            <option value="Journalism"> Journalism </option>
+            <option value="Hotel-Hospitality"> Hotel-Hospitality </option>
+            <option value="Real Estate"> Real Estate </option>
+            <option value="Business Development"> Business Development </option>
+            <option value="Human Resources"> Human Resources </option>
+            <option value="Research"> Research </option>
+            <option value="Construction"> Construction </option>
+            <option value="Information Technology"> Information Technology </option>
+            <option value="Restaurant-Food Service"> Restaurant-Food Service </option>
+            <option value="Consultant"> Consultant </option>
+            <option value="Installation- Maint- Repair"> Installation- Maint- Repair </option>
+            <option value="Retail/Customer Service"> Retail/Customer Service </option>
+            <option value="Insurance"> Insurance </option>
+            <option value="Sales"> Sales </option>
+            <option value="Design"> Design </option>
+            <option value="Inventory"> Inventory </option>
+            <option value="Science"> Science </option>
+            <option value="Distribution-Shipping"> Distribution-Shipping </option>
+            <option value="Legal"> Legal </option>
+            <option value="Skilled Labor- Trades"> Skilled Labor- Trades </option>
+            <option value="Education"> Education </option>
+            <option value="Teaching"> Teaching </option>
+            <option value="Legal Admin"> Legal Admin </option>
+            <option value="Strategy"> Strategy </option>
+            <option value="Planning"> Planning </option>
+            <option value="Engineering"> Engineering </option>
+            <option value="Management"> Management </option>
+            <option value="Supply Chain"> Supply Chain </option>
+            <option value="Manufacturing"> Manufacturing </option>
+            <option value="Telecommunications"> Telecommunications </option>
+            <option value="Executive"> Executive </option>
+            <option value="Marketing"> Marketing </option>
+            <option value="Training"> Training </option>
+            <option value="Facilities"> Facilities </option>
+            <option value="Media- Journalism- Newspaper"> Media- Journalism- Newspaper </option>
+            <option value="Transportation"> Transportation </option>
+            <option value="Finance"> Finance </option>
+            <option value="Nonprofit - Social Services"> Nonprofit - Social Services </option>
+            <option value="Warehouse"> Warehouse </option>
+            <option value="Franchise"> Franchise </option>
+          </select>
+        </div>
+          <!--end industry2-->
+
+          <!-- skills-->
+          <div class="form-group" show-errors>
+          <label for="skills">Acquired Skills (Describe the top 3 skills you have obtained in your previous work experience) </label>
+            <textarea type="text" id="skills" name="skills" class="form-control" ng-model="vm.credentials.skills" placeholder="Acquired Skills"> </textarea>
+          </div>
+          <!-- end skills -->
+
+          <!-- acquire skills-->
+          <div class="form-group" show-errors>
+          <label for="acquireskills"> What industry would you like to acquire skills in? </label>
+            <textarea type="text" id="acquireskills" name="acquireskills" class="form-control" ng-model="vm.credentials.acquireskills" placeholder="List Industries Here"> </textarea>
+          </div>
+          <!-- end  acquire skills -->
+
+          <!-- explain-->
+          <div class="form-group" show-errors>
+          <label for="explain"> Explain in detail the skills you would like to acquire. </label>
+            <textarea type="text" id="explain" name="acquireskills" class="form-control" ng-model="vm.credentials.explain"> </textarea>
+          </div>
+          <!-- end  explain -->
 
 
 
 
+          <h4> Task Payment </h4>
+          <small> We just need some information on how to compensate you </small>
 
-        </span>
+          <small>Select only one </small>
+
+
+          <h5>How would you prefer to receive payment for the task(s) you complete?</h5>
+          <!-- cash? -->
+        <div class="form-group" show-errors>
+          Cash/ Check mailed out to you: <input type="checkbox" id="cash" name="cash" class="form-control" ng-model="vm.credentials.cash" ng-init = "cash=true"> </input>
+        </div>
+          <!-- end cash? -->
+
+          <!-- visacard? -->
+        <div class="form-group" show-errors>
+          Visa Card: <input type="checkbox" id="visacard" name="visacard" class="form-control" ng-model="vm.credentials.visacard" ng-init = "visacard=true"> </input>
+        </div>
+          <!-- end visacard? -->
+
+          <!-- giftcard? -->
+        <div class="form-group" show-errors>
+          Gift Card (mailed): <input type="checkbox" id="giftcard" name="giftcard" class="form-control" ng-model="vm.credentials.giftcard" ng-init = "giftcard=true"> </input>
+        </div>
+          <!-- end giftcard? -->
+
+          <!-- billpay? -->
+        <div class="form-group" show-errors>
+          Bill Pay: <input type="checkbox" id="billpay" name="billpay" class="form-control" ng-model="vm.credentials.billpay" ng-init = "billpay=true"> </input>
+        </div>
+          <!-- end billpay? -->
+
+          <!-- retail? -->
+        <div class="form-group" show-errors>
+          Retail Vendor Specific/Grocery Card: <input type="checkbox" id="retail" name="retail" class="form-control" ng-model="vm.credentials.retail" ng-init = "retail=true"> </input>
+        </div>
+          <!-- end retail? -->
+
+          <!-- paypal? -->
+        <div class="form-group" show-errors>
+          Paypal: <input type="checkbox" id="paypal" name="paypal" class="form-control" ng-model="vm.credentials.paypal" ng-init = "paypal=true"> </input>
+        </div>
+          <!-- end retail? -->
+
+          <!-- egiftcard? -->
+        <div class="form-group" show-errors>
+          eGift Card: <input type="checkbox" id="egiftcard" name="egiftcard" class="form-control" ng-model="vm.credentials.egiftcard" ng-init = "egiftcard=true"> </input>
+        </div>
+          <!-- end egiftcard? -->
+
+          <!-- inPerson? -->
+        <div class="form-group" show-errors>
+          In Person: <input type="checkbox" id="inPerson" name="inPerson" class="form-control" ng-model="vm.credentials.inPerson" ng-init = "inPerson=true"> </input>
+        </div>
+          <!-- end inPerson? -->
+
+          <span ng-hide="vm.credentials.billpay">
+            <span ng-hide="vm.credentials.paypal">
+              <span ng-hide="vm.credentials.egiftcard">
+                <span ng-hide="vm.credentials.inPerson">
+          <h4> Mailing Address</h4>
+        <div class="form-group" show-errors>
+          <input type="text" id="addressclimber" name="addressclimber" class="form-control" ng-model="vm.credentials.addressclimber" placeholder="Street Address">
+          </input>
+        </div>
+          <!--end billing address -->
+          <!--city  -->
+
+        <div class="form-group" show-errors>
+          <input type="text" id="cityclimber" name="cityclimber" class="form-control" ng-model="vm.credentials.cityclimber" placeholder="City">
+          </input>
+        </div>
+          <!--end city -->
+
+          <!--state-->
+        <div class="form-group" show-errors>
+
+          <select type="text" id="stateclimber" name="stateclimber" class="form-control" ng-model="vm.credentials.stateclimber">
+            <option value=""> --- Select State --- </option>
+            <option value="AK"> AK </option>
+            <option value="AL"> AL </option>
+            <option value="AR"> AR </option>
+            <option value="AZ"> AZ </option>
+            <option value="CA"> CA </option>
+            <option value="CO"> CO </option>
+            <option value="CT"> CT </option>
+            <option value="DC"> DC </option>
+            <option value="DE"> DE </option>
+            <option value="FL"> FL </option>
+            <option value="GA"> GA </option>
+            <option value="HI"> HI </option>
+            <option value="IA"> IA </option>
+            <option value="ID"> ID </option>
+            <option value="IL"> IL </option>
+            <option value="IN"> IN </option>
+            <option value="KS"> KS </option>
+            <option value="KY"> KY </option>
+            <option value="LA"> LA </option>
+            <option value="MA"> MA </option>
+            <option value="MD"> MD </option>
+            <option value="ME"> ME </option>
+            <option value="MI"> MI </option>
+            <option value="MN"> MN </option>
+            <option value="MO"> MO </option>
+            <option value="MS"> MS </option>
+            <option value="MT"> MT </option>
+            <option value="NC"> NC </option>
+            <option value="ND"> ND </option>
+            <option value="NE"> NE </option>
+            <option value="NH"> NH </option>
+            <option value="NJ"> NJ </option>
+            <option value="NM"> NM </option>
+            <option value="NV"> NV </option>
+            <option value="NY"> NY </option>
+            <option value="OH"> OH </option>
+            <option value="OK"> OK </option>
+            <option value="OR"> OR </option>
+            <option value="PA"> PA </option>
+            <option value="RI"> RI </option>
+            <option value="SC"> SC </option>
+            <option value="SD"> SD </option>
+            <option value="TN"> TN </option>
+            <option value="TX"> TX </option>
+            <option value="UT"> UT </option>
+            <option value="VA"> VA </option>
+            <option value="VT"> VT </option>
+            <option value="WA"> WA </option>
+            <option value="WI"> WI </option>
+            <option value="WV"> WV </option>
+            <option value="WY"> WY </option>
+          </select>
+        </div>
+          <!--end state-->
+
+          <!-- zip code -->
+        <div class="form-group" show-errors>
+          <input type="text" id="zipcodeclimber" name="zipcodeclimber" class="form-control" ng-model="vm.credentials.zipcodeclimber" placeholder="Zip Code" maxlength="5">
+        </div>
+          <!-- end zip code -->
+
+          <!-- country -->
+        <div class="form-group" show-errors>
+          <input type="text" id="countryclimber" name="country" class="form-control" ng-model="vm.credentials.countryclimber" placeholder="Country">
+        </div>
+        <!-- end country -->
+          </span>
+          </span>
+          </span>
+          </span>
+
+
+
+
+          <span ng-hide="vm.credentials.cash">
+            <span ng-hide="vm.credentials.visacard">
+              <span ng-hide="vm.credentials.giftcard">
+                <span ng-hide="vm.credentials.retail">
+                  <span ng-hide="vm.credentials.egiftcard">
+                    <span ng-hide="vm.credentials.inPerson">
+                      <span ng-hide="vm.credentials.paypal">
+
+          <h4>Bill Pay</h4>
+          <small>You have selected to receive your payment in the form of payment towards your utility bill. Please not the amount will only equal your task value. </small>
+
+          <!-- name on account-->
+          <div class="form-group" show-errors>
+            <label for="nameOnAccount"> Name on the account:  </label>
+          <input type="text" id="nameOnAccount" name="nameOnAccount" class="form-control" ng-model="vm.credentials.nameOnAccount" placeholder="Name on the account">
+            </input>
+          </div>
+          <!--end name on account -->
+
+          <!-- account number-->
+          <div class="form-group" show-errors>
+            <label for="accountNumber"> Account number:  </label>
+          <input type="text" id="accountNumber" name="accountNumber" class="form-control" ng-model="vm.credentials.accountNumber" placeholder="Account Number">
+            </input>
+          </div>
+          <!--end account number-->
+
+          <!-- additional-->
+          <div class="form-group" show-errors>
+            <label for="additional"> Additional account information needed to pay bill  </label>
+          <textarea type="text" id="additional" name="additional" class="form-control" ng-model="vm.credentials.additional" placeholder="Additional Information">
+          </textarea>
+          </div>
+          <!--end account number-->
+          </span>
+          </span>
+          </span>
+          </span>
+          </span>
+          </span>
+          </span>
+
+
+          <span ng-hide="vm.credentials.cash">
+            <span ng-hide="vm.credentials.visacard">
+              <span ng-hide="vm.credentials.giftcard">
+                <span ng-hide="vm.credentials.retail">
+                  <span ng-hide="vm.credentials.billpay">
+                    <span ng-hide="vm.credentials.egiftcard">
+                      <span ng-hide="vm.credentials.inPerson">
+
+          <h4>PayPal Information</h4>
+          <small>Please enter either the email address OR phone number associated with your PayPal account </small>
+
+          <!-- paypalemail-->
+          <div class="form-group" show-errors>
+            <label for="paypalemail"> Email for PayPal Payment  </label>
+            <small>Please enter your email address to which you would like to receive your payment via PayPal.</small>
+            <input type="text" id="paypalemail" name="paypalemail" class="form-control" ng-model="vm.credentials.paypalemail" placeholder="PayPal Email">
+          </div>
+
+          <!--end paypalemail-->
+
+          <!-- phone number -->
+        <div class="form-group" show-errors>
+          <label for="paypalphone">Phone Number for PayPal Payment </label>
+          <small>Please enter your phone number to which you would like to receive your payment via PayPal.</small>
+          <input type="text" id="paypalphone" name="phone" class="form-control" ng-model="vm.credentials.paypalphone" placeholder="Phone Number" maxlength="10" required>
+          </div>
+          <!-- end phone number -->
+          </span>
+                    </span>
+              </span>
+              </span>
+              </span>
+              </span>
+              </span>
+              </span>
+              </span>
 
         <div class="text-center form-group">
           <button type="submit" class="btn btn-primary">Sign up</button>
