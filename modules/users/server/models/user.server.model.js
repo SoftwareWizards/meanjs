@@ -120,10 +120,12 @@ var UserSchema = new Schema({
     type: String,
     trim: true
   },
+
   transport: {
     type: String,
     trim: true
   },
+
   area: {
     type: String,
     trim: true
@@ -140,6 +142,7 @@ var UserSchema = new Schema({
     type: String,
     trim: true
   },
+
   disability: {
     type: String,
     trim: true
@@ -253,7 +256,8 @@ var UserSchema = new Schema({
       //added builder and climber here
       enum: ['user', 'admin', 'builder', 'climber']
     }],
-    //default: ['user'],
+    default: ['user']
+
     //required: 'Please provide at least one role'
   },
 
