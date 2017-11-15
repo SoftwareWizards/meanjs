@@ -1,5 +1,7 @@
 <div xmlns="http://www.w3.org/1999/html">
   <h3 class="col-xs-12 text-center">Sign up using your email</h3>
+
+
   <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
     <form name="vm.userForm" ng-submit="vm.signup(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
       <fieldset>
@@ -12,6 +14,21 @@
           </div>
         </div>
         -->
+        <p>You're on your way! Before you can use our service, we need some basic information to fill out your user profile! Please select whether you are a builder or climber before filling out anything else.</p>
+        <h3> User Type </h3>
+        <!-- builder? -->
+        <div class="form-group" show-errors>
+          <label for="builderquestion"> Builder </label>
+          <input type="checkbox" id="builderquestion" name="builderquestion" class="form-control" ng-model="vm.credentials.builderquestion" ng-init = "builderquestion=true"> </input>
+        </div>
+        <!-- end builder? -->
+
+        <!-- climber? -->
+        <div class="form-group" show-errors>
+          <label for="climberquestion"> Climber </label>
+          <input type="checkbox" id="climberquestion" name="climberquestion" class="form-control" ng-model="vm.credentials.climberquestion" ng-init = "climberquestion=true"> </input>
+        </div>
+        <!-- end climber? -->
 
         <div class="form-group" show-errors>
           <label for="firstName">First Name</label>
@@ -117,20 +134,7 @@
           <uib-progressbar value="requirementsProgress" type="{{requirementsColor}}"><span style="color:white; white-space:nowrap;">{{requirementsProgress}}%</span></uib-progressbar>
         </div>
 
-        <h3> Are you a Builder or Climber? </h3>
-        <!-- builder? -->
-        <div class="form-group" show-errors>
-          <label for="builderquestion"> Builder </label>
-          <input type="checkbox" id="builderquestion" name="builderquestion" class="form-control" ng-model="vm.credentials.builderquestion" ng-init = "builderquestion=true"> </input>
-        </div>
-        <!-- end builder? -->
 
-        <!-- climber? -->
-        <div class="form-group" show-errors>
-          <label for="climberquestion"> Climber </label>
-          <input type="checkbox" id="climberquestion" name="climberquestion" class="form-control" ng-model="vm.credentials.climberquestion" ng-init = "climberquestion=true"> </input>
-        </div>
-        <!-- end climber? -->
 
         <!--billing address -->
         <span ng-hide="vm.credentials.climberquestion">
