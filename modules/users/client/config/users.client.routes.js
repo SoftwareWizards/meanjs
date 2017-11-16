@@ -18,7 +18,7 @@
         controller: 'SettingsController',
         controllerAs: 'vm',
         data: {
-          roles: ['user', 'admin']
+          roles: ['user', 'admin', 'builder' , 'climber']
         }
       })
       .state('settings.profile', {
@@ -123,6 +123,7 @@
         data: {
           pageTitle: 'Password reset form'
         }
+
       });
   }
 }());

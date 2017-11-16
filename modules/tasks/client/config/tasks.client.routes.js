@@ -66,7 +66,6 @@
         },
         data: {
 
-          roles: ['user', 'admin','builder'],
           pageTitle: 'Task {{ taskResolve.name }}'
         }
       });
