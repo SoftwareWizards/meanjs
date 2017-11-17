@@ -66,6 +66,7 @@
         },
         data: {
 
+
           pageTitle: 'Task {{ taskResolve.name }}'
         }
       });
