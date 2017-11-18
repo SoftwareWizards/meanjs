@@ -24,17 +24,24 @@
           <input name="type" type="text" ng-model="vm.task.type" id="type" class="form-control" placeholder="Task Type" required>
         </div>
 
-        <!-- Text box for skill level -->
+        <!-- Dropdown for skill level -->
         <div class="form-group" show-errors>
-          <label class="control-label" for="level">Enter The Skill Level (Beginner, Novice, Skilled)</label>
-          <input name="level" type="text" ng-model="vm.task.level" id="level" class="form-control" placeholder="Skill Level" required>
+          <label class="control-label" for="level">Enter Skill Level</label>
+          <select name="level" ng-model="vm.post.level" id= "level" class="form-control" required>
+            <option value = ""> --- Please select --- </option>
+            <option value = "Beginner"> Beginner</option>
+            <option value = "Novice"> Battered Women</option>
+            <option value = "Skilled"> Recovering Addicts</option>
+          </select>
         </div>
-
+<!--
         <div class="form-group" show-errors>
           <label class="control-label" for="priority">Enter Demographic Priority (Homeless, Battered Women, Alcoholics, Other)</label>
           <input name="priority" type="text" ng-model="vm.task.priority" id="priority" class="form-control" placeholder="Demographic Priority" required>
         </div>
-        <!-- Text box for Demographic Priority
+
+        -->
+        <!-- Dropdown for Demographic Priority-->
         <div class="form-group" show-errors>
           <label class="control-label" for="priority">Enter Demographic Priority</label>
           <select name="priority" ng-model="vm.post.priority" id= "priority" class="form-control" placeholder="Demographic Priority" required>
@@ -46,7 +53,9 @@
           <option value = "Other"> Other</option>
           </select>
         </div>
-        -->
+
+
+
 
         <div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.task._id ? 'Update' : 'Create'}}</button>

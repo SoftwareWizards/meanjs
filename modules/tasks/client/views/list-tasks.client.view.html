@@ -3,7 +3,8 @@
     <h1>Tasks</h1>
   </div>
   <!--Search bar: implement 'filterObj' object used to filter posts -->
-  <input type="text" class="form-control" placeholder="Search" ng-model="filterObj.$">
+  <input type="text" class="form-control" placeholder="Search" ng-model="vm.search" ng-change="vm.figureOutItemsToDisplay()">
+
 
 
   <div class="list-group">

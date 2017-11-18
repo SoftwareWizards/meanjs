@@ -5,14 +5,17 @@
       <fieldset>
 <!--
         <div class="form-group" show-errors>
-          <label for="roles">Roles</label>
-          <input type="text" id="roles" name="firstName" class="form-control" ng-model="vm.credentials.roles" required>
-          <div ng-messages="vm.userForm.roles.$error" role="alert">
-            <p class="help-block error-text" ng-message="required">First name is required.</p>
-          </div>
-        </div>
-        -->
+          <label for="roles"> Please select your role </label>
+          <select type="text" id="roles" name="roles" class="form-control" ng-model="vm.credentials.roles" required>
+          <option value=""> --- Please Select --- </option>
+          <option value="climber"> Climber </option>
+          <option value="builder"> Builder </option>
+          </select>
 
+          </div>
+
+
+ -->
         <div class="form-group" show-errors>
           <label for="firstName">First Name</label>
           <input type="text" id="firstName" name="firstName" class="form-control" ng-model="vm.credentials.firstName" placeholder="First Name" required autofocus>

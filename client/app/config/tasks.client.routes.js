@@ -13,28 +13,37 @@ angular.module('tasks').config(['$stateProvider', '$urlRouterProvider',
         params: {
           successMessage: null
         },
-        data: {
 
+        //added data
+        data: {
           //added this line
           roles: ['user', 'admin','builder', 'climber'],
+
+
         }
       })
       .state('tasks.create', {
         url: '/create',
         templateUrl: 'app/views/create-task.client.view.html',
-        data: {
 
+        //added data
+        data: {
           //added this line
           roles: ['user', 'admin','builder', 'climber'],
+
+
         }
       })
       .state('tasks.view', {
         url: '/:taskId',
         templateUrl: 'app/views/view-task.client.view.html',
-        data: {
 
+        //added data
+        data: {
           //added this line
           roles: ['user', 'admin','builder', 'climber'],
+
+
         }
       })
       /*
@@ -43,10 +52,13 @@ angular.module('tasks').config(['$stateProvider', '$urlRouterProvider',
 	  .state('tasks.edit', {
 		url: '/edit/:taskId',
 		templateUrl: 'app/views/edit-task.client.view.html',
-      data: {
 
+      //added data
+      data: {
         //added this line
         roles: ['user', 'admin','builder', 'climber'],
+
+
       }
 	  })
   }

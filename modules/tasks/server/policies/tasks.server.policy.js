@@ -22,15 +22,17 @@ exports.invokeRolesPolicies = function () {
       permissions: '*'
     }]
   }, {
-    roles: ['user'],
+    //added builder and climber to the roles here
+    roles: ['user', 'builder', 'climber'],
     allows: [{
       resources: '/api/tasks',
       permissions: ['get', 'post']
     }, {
       resources: '/api/tasks/:taskId',
-      permissions: ['get']
+      permissions: ['*']
     }]
   }, {
+
     roles: ['guest'],
     allows: [{
       resources: '/api/tasks',
