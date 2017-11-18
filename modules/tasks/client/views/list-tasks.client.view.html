@@ -8,7 +8,7 @@
 
 
   <div class="list-group">
-    <a ng-repeat="task in vm.tasks"
+    <a ng-repeat="task in vm.tasks | filter: vm.search"
        ui-sref="tasks.view({ taskId: task._id })"
        class="list-group-item">
       <small class="list-group-item-text">
