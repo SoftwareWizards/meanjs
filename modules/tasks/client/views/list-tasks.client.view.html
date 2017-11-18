@@ -7,10 +7,11 @@
 
 
 
-  <div class="list-group">
+<!--added ng-show here but need to how not shield it from climbers-->
+  <div class="list-group" >
     <a ng-repeat="task in vm.tasks"
        ui-sref="tasks.view({ taskId: task._id })"
-       class="list-group-item">
+       class="list-group-item" >
       <small class="list-group-item-text">
         Posted on
         <span ng-bind="task.created | date:'mediumDate'"></span>

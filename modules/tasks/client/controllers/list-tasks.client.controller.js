@@ -25,13 +25,14 @@
     .module('tasks')
     .controller('TasksListController', TasksListController);
 
-  TasksListController.$inject = ['$scope', '$filter', 'TasksService'];
+  TasksListController.$inject = [ '$filter', 'TasksService'];
 
-  function TasksListController($scope, $filter, TasksService) {
+  function TasksListController( $filter, TasksService) {
     var vm = this;
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
     vm.pageChanged = pageChanged;
+
 
     TasksService.query(function (data) {
       vm.tasks = data;

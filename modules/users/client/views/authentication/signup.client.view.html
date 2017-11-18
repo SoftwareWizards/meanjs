@@ -3,19 +3,22 @@
   <div class="col-xs-offset-2 col-xs-8 col-md-offset-4 col-md-4">
     <form name="vm.userForm" ng-submit="vm.signup(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
       <fieldset>
-<!--
+        <!--
+        <h4>Please select your role:</h4>
         <div class="form-group" show-errors>
-          <label for="roles"> Please select your role </label>
-          <select type="text" id="roles" name="roles" class="form-control" ng-model="vm.credentials.roles" required>
-          <option value=""> --- Please Select --- </option>
-          <option value="climber"> Climber </option>
-          <option value="builder"> Builder </option>
-          </select>
+          <label for="climber"> Climber: </label>
+          <input type="radio" id="climber" name="climber" class="form-control" ng-model="vm.credentials.roles" value="climber">
+          </input>
+
+
+          <label for="builder"> Builder: </label>
+          <input type="radio" id="builder" name="builder" class="form-control" ng-model="vm.credentials.roles" value="builder">
+          </input>
 
           </div>
+-->
 
 
- -->
         <div class="form-group" show-errors>
           <label for="firstName">First Name</label>
           <input type="text" id="firstName" name="firstName" class="form-control" ng-model="vm.credentials.firstName" placeholder="First Name" required autofocus>
