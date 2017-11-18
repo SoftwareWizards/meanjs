@@ -18,7 +18,9 @@
         controller: 'SettingsController',
         controllerAs: 'vm',
         data: {
+
           roles: ['user', 'admin', 'builder' , 'climber']
+
         }
       })
       .state('settings.profile', {
