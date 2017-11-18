@@ -21,15 +21,24 @@
     .module('compensations')
     .controller('CompensationsListController', CompensationsListController);
 
+<<<<<<< HEAD
   CompensationsListController.$inject = [ '$filter', 'CompensationsService'];
 
   function CompensationsListController( $filter, CompensationsService) {
+=======
+  CompensationsListController.$inject = ['$scope', '$filter', 'CompensationsService'];
+
+  function CompensationsListController($scope, $filter, CompensationsService) {
+>>>>>>> 6fc5168f4b2e53ac45a66fc0061cc876baf79d0a
     var vm = this;
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
     vm.pageChanged = pageChanged;
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6fc5168f4b2e53ac45a66fc0061cc876baf79d0a
     CompensationsService.query(function (data) {
       vm.compensations = data;
       vm.buildPager();
@@ -57,4 +66,7 @@
     }
   }
 }());
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6fc5168f4b2e53ac45a66fc0061cc876baf79d0a
