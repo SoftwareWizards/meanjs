@@ -2,14 +2,14 @@
   <div class="page-header">
     <h1>Tasks</h1>
   </div>
-  <!--Search bar: implement 'filterObj' object used to filter posts -->
+  <!--Search bar -->
   <input type="text" class="form-control" placeholder="Search" ng-model="vm.search" ng-change="vm.figureOutItemsToDisplay()">
 
 
 
 <!--added ng-show here but need to how not shield it from climbers-->
   <div class="list-group" >
-    <a ng-repeat="task in vm.tasks"
+    <a ng-repeat="task in vm.tasks |filter: vm.search"
        ui-sref="tasks.view({ taskId: task._id })"
        class="list-group-item" >
       <small class="list-group-item-text">
