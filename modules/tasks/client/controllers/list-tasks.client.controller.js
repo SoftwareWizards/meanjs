@@ -32,6 +32,11 @@
     vm.buildPager = buildPager;
     vm.figureOutItemsToDisplay = figureOutItemsToDisplay;
     vm.pageChanged = pageChanged;
+    //added user roles
+    var climber;
+    var builder;
+    vm.hasEditRights= hasEditRights;
+    vm.hasViewRights= hasViewRights;
 
 
     TasksService.query(function (data) {

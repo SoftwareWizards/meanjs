@@ -12,7 +12,9 @@ var path = require('path'),
 // URLs for which user can't be redirected on signin
 var noReturnUrls = [
   '/authentication/signin',
-  '/authentication/signup'
+  '/authentication/signup',
+  //added this line
+  '/authentication/demographics'
 ];
 
 /**
@@ -71,6 +73,7 @@ exports.signin = function (req, res, next) {
     }
   })(req, res, next);
 };
+
 
 /**
  * Signout

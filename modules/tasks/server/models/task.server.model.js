@@ -40,7 +40,7 @@ var TaskSchema = new Schema({
   },
   user: {
     type: Schema.ObjectId,
-    ref: 'User',
+    ref: 'User'
   },
 
 });

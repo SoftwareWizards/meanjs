@@ -1,15 +1,9 @@
 <section>
-
-<!--added the ng-shows to this line
-  //still need to figure out how not to shield it from climbers -->
-
-  <div class="page-header" ng-show="vm.task.isCurrentUserOwner" ng-show="user.roles.climber">
     <h1><span ng-bind="vm.task.name"></span> <small>Skill Level:</small> <small ng-bind = "vm.task.level"></small></h1>
     <div ng-bind="vm.task.type"></div>
-  </div>
-
   <div class="pull-right"
-       ng-show="vm.task.isCurrentUserOwner">
+      ng-show="vm.task.isCurrentUserOwner">
+
     <a class="btn btn-primary"
        ui-sref="tasks.edit({ taskId: vm.task._id })">
       <i class="glyphicon glyphicon-edit"></i>

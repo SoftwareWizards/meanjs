@@ -9,6 +9,14 @@
 
   function AuthenticationController($scope, $state, UsersService, $location, $window, Authentication, PasswordValidator, Notification) {
     var vm = this;
+    //added this line
+    /*
+    $scope.processForm = function(){
+      // And redirect to the previous or home page
+      $state.go('authentication.demographics');
+    };
+    */
+
 
     vm.authentication = Authentication;
     vm.getPopoverMsg = PasswordValidator.getPopoverMsg;
@@ -16,6 +24,8 @@
     vm.signin = signin;
     vm.callOauthProvider = callOauthProvider;
     vm.usernameRegex = /^(?=[\w.-]+$)(?!.*[._-]{2})(?!\.)(?!.*\.$).{3,34}$/;
+
+
 
     // Get an eventual error defined in the URL query string:
     if ($location.search().err) {
@@ -33,11 +43,15 @@
         $scope.$broadcast('show-errors-check-validity', 'vm.userForm');
 
         return false;
+
       }
+
 
       UsersService.userSignup(vm.credentials)
         .then(onUserSignupSuccess)
         .catch(onUserSignupError);
+
+
     }
 
     function signin(isValid) {
@@ -89,4 +103,6 @@
       Notification.error({ message: response.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Signin Error!', delay: 6000 });
     }
   }
+
+
 }());
