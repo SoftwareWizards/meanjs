@@ -24,14 +24,14 @@ var TaskSchema = new Schema({
   },
   level: {
     type: String,
-    default: '',
-    required: 'Please fill Task level',
+    //default: '',
+    //required: 'Please fill Task level',
     trim: true
   },
   priority: {
     type: String,
-    default: '',
-    required: 'Please fill Task priority',
+    //default: '',
+    //required: 'Please fill Task priority',
     trim: true
   },
   created: {
