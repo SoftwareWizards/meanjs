@@ -141,6 +141,7 @@ var UserSchema = new Schema({
   program: {
     type: String,
     trim: true
+
   },
 
   disability: {

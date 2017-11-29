@@ -32,6 +32,60 @@
           pageTitle: 'Settings'
         }
       })
+      //added demographics route
+
+      .state('settings.demographics', {
+        url: '/demographics',
+        templateUrl: '/modules/users/client/views/settings/edit-demographics.client.view.html',
+        controller: 'EditProfileController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'demographics',
+          roles: ['user', 'admin', 'builder' , 'climber']
+
+        }
+      })
+      //end demographics route
+      //added skills route
+      .state('settings.skills', {
+        url: '/skills',
+        templateUrl: '/modules/users/client/views/settings/edit-skills.client.view.html',
+        controller: 'EditProfileController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'skills',
+          roles: ['user', 'admin', 'builder' , 'climber']
+
+        }
+      })
+      //end skills route
+      //added billing route
+      .state('settings.billing', {
+        url: '/billing',
+        templateUrl: '/modules/users/client/views/settings/edit-billing.client.view.html',
+        controller: 'EditProfileController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'billing',
+          roles: ['user', 'admin', 'builder' , 'climber']
+
+        }
+      })
+      //end billing route
+
+      //added payment route
+      .state('settings.payment', {
+        url: '/payment',
+        templateUrl: '/modules/users/client/views/settings/edit-payment.client.view.html',
+        controller: 'EditProfileController',
+        controllerAs: 'vm',
+        data: {
+          pageTitle: 'payment',
+          roles: ['user', 'admin', 'builder' , 'climber']
+
+        }
+      })
+      //end payment route
       .state('settings.password', {
         url: '/password',
         templateUrl: '/modules/users/client/views/settings/change-password.client.view.html',

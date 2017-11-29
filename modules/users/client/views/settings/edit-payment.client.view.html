@@ -1,0 +1,242 @@
+<section class="row">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4">
+    <form name="vm.userForm" ng-submit="vm.updateUserProfile(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
+      <fieldset>
+
+        <h4> Task Payment </h4>
+        <small> We just need some information on how to compensate you </small>
+
+        <small>Select only one </small>
+
+
+        <h5>How would you prefer to receive payment for the task(s) you complete?</h5>
+        <!-- cash? -->
+        <div class="form-group" show-errors>
+          Cash/ Check mailed out to you: <input type="checkbox" id="cash" name="cash" class="form-control" ng-model="vm.user.cash" ng-init = "cash=true"> </input>
+        </div>
+        <!-- end cash? -->
+
+        <!-- visacard? -->
+        <div class="form-group" show-errors>
+          Visa Card: <input type="checkbox" id="visacard" name="visacard" class="form-control" ng-model="vm.user.visacard" ng-init = "visacard=true"> </input>
+        </div>
+        <!-- end visacard? -->
+
+        <!-- giftcard? -->
+        <div class="form-group" show-errors>
+          Gift Card (mailed): <input type="checkbox" id="giftcard" name="giftcard" class="form-control" ng-model="vm.user.giftcard" ng-init = "giftcard=true"> </input>
+        </div>
+        <!-- end giftcard? -->
+
+        <!-- billpay? -->
+        <div class="form-group" show-errors>
+          Bill Pay: <input type="checkbox" id="billpay" name="billpay" class="form-control" ng-model="vm.user.billpay" ng-init = "billpay=true"> </input>
+        </div>
+        <!-- end billpay? -->
+
+        <!-- retail? -->
+        <div class="form-group" show-errors>
+          Retail Vendor Specific/Grocery Card: <input type="checkbox" id="retail" name="retail" class="form-control" ng-model="vm.user.retail" ng-init = "retail=true"> </input>
+        </div>
+        <!-- end retail? -->
+
+        <!-- paypal? -->
+        <div class="form-group" show-errors>
+          Paypal: <input type="checkbox" id="paypal" name="paypal" class="form-control" ng-model="vm.user.paypal" ng-init = "paypal=true"> </input>
+        </div>
+        <!-- end retail? -->
+
+        <!-- egiftcard? -->
+        <div class="form-group" show-errors>
+          eGift Card: <input type="checkbox" id="egiftcard" name="egiftcard" class="form-control" ng-model="vm.user.egiftcard" ng-init = "egiftcard=true"> </input>
+        </div>
+        <!-- end egiftcard? -->
+
+        <!-- inPerson? -->
+        <div class="form-group" show-errors>
+          In Person: <input type="checkbox" id="inPerson" name="inPerson" class="form-control" ng-model="vm.user.inPerson" ng-init = "inPerson=true"> </input>
+        </div>
+        <!-- end inPerson? -->
+
+        <span ng-hide="vm.user.billpay">
+            <span ng-hide="vm.user.paypal">
+              <span ng-hide="vm.user.egiftcard">
+                <span ng-hide="vm.user.inPerson">
+          <h4> Mailing Address</h4>
+        <div class="form-group" show-errors>
+          <input type="text" id="addressclimber" name="addressclimber" class="form-control" ng-model="vm.user.addressclimber" placeholder="Street Address">
+          </input>
+        </div>
+                  <!--end billing address -->
+                  <!--city  -->
+
+        <div class="form-group" show-errors>
+          <input type="text" id="cityclimber" name="cityclimber" class="form-control" ng-model="vm.user.cityclimber" placeholder="City">
+          </input>
+        </div>
+                  <!--end city -->
+
+                  <!--state-->
+        <div class="form-group" show-errors>
+
+          <select type="text" id="stateclimber" name="stateclimber" class="form-control" ng-model="vm.user.stateclimber">
+            <option value=""> --- Select State --- </option>
+            <option value="AK"> AK </option>
+            <option value="AL"> AL </option>
+            <option value="AR"> AR </option>
+            <option value="AZ"> AZ </option>
+            <option value="CA"> CA </option>
+            <option value="CO"> CO </option>
+            <option value="CT"> CT </option>
+            <option value="DC"> DC </option>
+            <option value="DE"> DE </option>
+            <option value="FL"> FL </option>
+            <option value="GA"> GA </option>
+            <option value="HI"> HI </option>
+            <option value="IA"> IA </option>
+            <option value="ID"> ID </option>
+            <option value="IL"> IL </option>
+            <option value="IN"> IN </option>
+            <option value="KS"> KS </option>
+            <option value="KY"> KY </option>
+            <option value="LA"> LA </option>
+            <option value="MA"> MA </option>
+            <option value="MD"> MD </option>
+            <option value="ME"> ME </option>
+            <option value="MI"> MI </option>
+            <option value="MN"> MN </option>
+            <option value="MO"> MO </option>
+            <option value="MS"> MS </option>
+            <option value="MT"> MT </option>
+            <option value="NC"> NC </option>
+            <option value="ND"> ND </option>
+            <option value="NE"> NE </option>
+            <option value="NH"> NH </option>
+            <option value="NJ"> NJ </option>
+            <option value="NM"> NM </option>
+            <option value="NV"> NV </option>
+            <option value="NY"> NY </option>
+            <option value="OH"> OH </option>
+            <option value="OK"> OK </option>
+            <option value="OR"> OR </option>
+            <option value="PA"> PA </option>
+            <option value="RI"> RI </option>
+            <option value="SC"> SC </option>
+            <option value="SD"> SD </option>
+            <option value="TN"> TN </option>
+            <option value="TX"> TX </option>
+            <option value="UT"> UT </option>
+            <option value="VA"> VA </option>
+            <option value="VT"> VT </option>
+            <option value="WA"> WA </option>
+            <option value="WI"> WI </option>
+            <option value="WV"> WV </option>
+            <option value="WY"> WY </option>
+          </select>
+        </div>
+                  <!--end state-->
+
+                  <!-- zip code -->
+        <div class="form-group" show-errors>
+          <input type="text" id="zipcodeclimber" name="zipcodeclimber" class="form-control" ng-model="vm.user.zipcodeclimber" placeholder="Zip Code" maxlength="5">
+        </div>
+                  <!-- end zip code -->
+
+                  <!-- country -->
+        <div class="form-group" show-errors>
+          <input type="text" id="countryclimber" name="country" class="form-control" ng-model="vm.user.countryclimber" placeholder="Country">
+        </div>
+                  <!-- end country -->
+          </span>
+          </span>
+          </span>
+          </span>
+
+
+
+
+        <span ng-hide="vm.user.cash">
+            <span ng-hide="vm.user.visacard">
+              <span ng-hide="vm.user.giftcard">
+                <span ng-hide="vm.user.retail">
+                  <span ng-hide="vm.user.egiftcard">
+                    <span ng-hide="vm.user.inPerson">
+                      <span ng-hide="vm.user.paypal">
+
+          <h4>Bill Pay</h4>
+          <small>You have selected to receive your payment in the form of payment towards your utility bill. Please not the amount will only equal your task value. </small>
+
+                        <!-- name on account-->
+          <div class="form-group" show-errors>
+            <label for="nameOnAccount"> Name on the account:  </label>
+          <input type="text" id="nameOnAccount" name="nameOnAccount" class="form-control" ng-model="vm.user.nameOnAccount" placeholder="Name on the account">
+            </input>
+          </div>
+                        <!--end name on account -->
+
+                        <!-- account number-->
+          <div class="form-group" show-errors>
+            <label for="accountNumber"> Account number:  </label>
+          <input type="text" id="accountNumber" name="accountNumber" class="form-control" ng-model="vm.user.accountNumber" placeholder="Account Number">
+            </input>
+          </div>
+                        <!--end account number-->
+
+                        <!-- additional-->
+          <div class="form-group" show-errors>
+            <label for="additional"> Additional account information needed to pay bill  </label>
+          <textarea type="text" id="additional" name="additional" class="form-control" ng-model="vm.user.additional" placeholder="Additional Information">
+          </textarea>
+          </div>
+                        <!--end account number-->
+          </span>
+          </span>
+          </span>
+          </span>
+          </span>
+          </span>
+          </span>
+
+
+        <span ng-hide="vm.user.cash">
+            <span ng-hide="vm.user.visacard">
+              <span ng-hide="vm.user.giftcard">
+                <span ng-hide="vm.user.retail">
+                  <span ng-hide="vm.user.billpay">
+                    <span ng-hide="vm.user.egiftcard">
+                      <span ng-hide="vm.user.inPerson">
+
+          <h4>PayPal Information</h4>
+          <small>Please enter either the email address OR phone number associated with your PayPal account </small>
+
+                        <!-- paypalemail-->
+          <div class="form-group" show-errors>
+            <label for="paypalemail"> Email for PayPal Payment  </label>
+            <small>Please enter your email address to which you would like to receive your payment via PayPal.</small>
+            <input type="text" id="paypalemail" name="paypalemail" class="form-control" ng-model="vm.user.paypalemail" placeholder="PayPal Email">
+          </div>
+
+                        <!--end paypalemail-->
+
+                        <!-- phone number -->
+        <div class="form-group" show-errors>
+          <label for="paypalphone">Phone Number for PayPal Payment </label>
+          <small>Please enter your phone number to which you would like to receive your payment via PayPal.</small>
+          <input type="text" id="paypalphone" name="phone" class="form-control" ng-model="vm.user.paypalphone" placeholder="Phone Number" maxlength="10">
+          </div>
+                        <!-- end phone number -->
+          </span>
+                    </span>
+              </span>
+              </span>
+              </span>
+              </span>
+              </span>
+        </span>
+        <div class="text-center form-group">
+          <button type="submit" class="btn btn-primary">Save Payment Information</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

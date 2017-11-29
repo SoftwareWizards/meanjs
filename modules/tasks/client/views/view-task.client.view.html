@@ -3,10 +3,17 @@
 <!--added the ng-shows to this line
   //still need to figure out how not to shield it from climbers -->
 
-  <div class="page-header" ng-show="vm.task.isCurrentUserOwner" ng-show="user.roles.climber">
+ <span ng-show="vm.task.isCurrentUserOwner">
+
+
+
     <h1><span ng-bind="vm.task.name"></span> <small>Skill Level:</small> <small ng-bind = "vm.task.level"></small></h1>
     <div ng-bind="vm.task.type"></div>
-  </div>
+
+
+</span>
+
+
 
   <div class="pull-right"
        ng-show="vm.task.isCurrentUserOwner">
@@ -31,5 +38,4 @@
 
   <p class="lead" ng-bind="vm.task.content"></p>
 
-  </span>
 </section>
