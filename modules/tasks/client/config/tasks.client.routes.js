@@ -66,7 +66,8 @@
         },
         data: {
 
-
+          //added this line
+          roles: ['user', 'admin', 'builder', 'climber'],
           pageTitle: 'Task {{ taskResolve.name }}'
         }
       });

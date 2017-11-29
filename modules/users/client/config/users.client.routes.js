@@ -32,6 +32,7 @@
           pageTitle: 'Settings'
         }
       })
+
       .state('settings.password', {
         url: '/password',
         templateUrl: '/modules/users/client/views/settings/change-password.client.view.html',
