@@ -9,7 +9,7 @@
 
 <!--added ng-show here but need to how not shield it from climbers-->
 
-  <div class="list-group">
+  <div class="list-group" >
 
     <a ng-repeat="task in vm.tasks |filter: vm.search"
        ui-sref="tasks.view({ taskId: task._id })"
@@ -26,7 +26,7 @@
   </div>
 
   <!-- new changes start here -->
-  <span ng-if="!task.climber">
+  <span ng-hide="vm.task.roles ==='climber'">
   <div class="alert alert-warning text-center" ng-if="vm.tasks.$resolved && !vm.tasks.length">
     No Tasks yet, why don't you <a ui-sref="tasks.create">create one</a>?
   </div>
