@@ -1,0 +1,171 @@
+<section class="row">
+  <div class="col-xs-offset-1 col-xs-10 col-md-offset-4 col-md-4">
+    <form name="vm.userForm" ng-submit="vm.updateUserProfile(vm.userForm.$valid)" class="signin" novalidate autocomplete="off">
+      <fieldset>
+        <h4> Skills </h4>
+        <small> Use this section to tell us a little bit about yourself and the things you do. </small>
+
+        <h4> Task Category </h4>
+        <small> Please select the industry you most recently worked in.  </small>
+
+        <!--industry1-->
+        <div class="form-group" show-errors>
+
+          <select type="text" id="industry1" name="industry1" class="form-control" ng-model="vm.user.industry1">
+            <option value=""> --- Select Industry --- </option>
+            <option value="Accounting"> Accounting </option>
+            <option value="General Business"> General Business </option>
+            <option value="Admin and Clerical"> Admin and Clerical </option>
+            <option value="General Labor"> General Labor </option>
+            <option value="Pharmaceutical"> Pharmaceutical </option>
+            <option value="Automotive"> Automotive </option>
+            <option value="Banking"> Banking </option>
+            <option value="Grocery"> Grocery </option>
+            <option value="Purchasing-Procurement"> Purchasing-Procurement </option>
+            <option value="Biotech"> Biotech </option>
+            <option value="Health Care"> Health Care </option>
+            <option value="Quality Assurance"> Quality Assurance </option>
+            <option value="Quality Control"> Quality Control </option>
+            <option value="Broadcast"> Broadcast </option>
+            <option value="Journalism"> Journalism </option>
+            <option value="Hotel-Hospitality"> Hotel-Hospitality </option>
+            <option value="Real Estate"> Real Estate </option>
+            <option value="Business Development"> Business Development </option>
+            <option value="Human Resources"> Human Resources </option>
+            <option value="Research"> Research </option>
+            <option value="Construction"> Construction </option>
+            <option value="Information Technology"> Information Technology </option>
+            <option value="Restaurant-Food Service"> Restaurant-Food Service </option>
+            <option value="Consultant"> Consultant </option>
+            <option value="Installation- Maint- Repair"> Installation- Maint- Repair </option>
+            <option value="Retail/Customer Service"> Retail/Customer Service </option>
+            <option value="Insurance"> Insurance </option>
+            <option value="Sales"> Sales </option>
+            <option value="Design"> Design </option>
+            <option value="Inventory"> Inventory </option>
+            <option value="Science"> Science </option>
+            <option value="Distribution-Shipping"> Distribution-Shipping </option>
+            <option value="Legal"> Legal </option>
+            <option value="Skilled Labor- Trades"> Skilled Labor- Trades </option>
+            <option value="Education"> Education </option>
+            <option value="Teaching"> Teaching </option>
+            <option value="Legal Admin"> Legal Admin </option>
+            <option value="Strategy"> Strategy </option>
+            <option value="Planning"> Planning </option>
+            <option value="Engineering"> Engineering </option>
+            <option value="Management"> Management </option>
+            <option value="Supply Chain"> Supply Chain </option>
+            <option value="Manufacturing"> Manufacturing </option>
+            <option value="Telecommunications"> Telecommunications </option>
+            <option value="Executive"> Executive </option>
+            <option value="Marketing"> Marketing </option>
+            <option value="Training"> Training </option>
+            <option value="Facilities"> Facilities </option>
+            <option value="Media- Journalism- Newspaper"> Media- Journalism- Newspaper </option>
+            <option value="Transportation"> Transportation </option>
+            <option value="Finance"> Finance </option>
+            <option value="Nonprofit - Social Services"> Nonprofit - Social Services </option>
+            <option value="Warehouse"> Warehouse </option>
+            <option value="Franchise"> Franchise </option>
+          </select>
+        </div>
+        <!--end industry1-->
+
+        <small> Please select the second most recent industry you worked in.  </small>
+
+        <!--industry2-->
+        <div class="form-group" show-errors>
+
+          <select type="text" id="industry2" name="industry2" class="form-control" ng-model="vm.user.industry2">
+            <option value=""> --- Select Industry --- </option>
+            <option value="Accounting"> Accounting </option>
+            <option value="General Business"> General Business </option>
+            <option value="Admin and Clerical"> Admin and Clerical </option>
+            <option value="General Labor"> General Labor </option>
+            <option value="Pharmaceutical"> Pharmaceutical </option>
+            <option value="Automotive"> Automotive </option>
+            <option value="Banking"> Banking </option>
+            <option value="Grocery"> Grocery </option>
+            <option value="Purchasing-Procurement"> Purchasing-Procurement </option>
+            <option value="Biotech"> Biotech </option>
+            <option value="Health Care"> Health Care </option>
+            <option value="Quality Assurance"> Quality Assurance </option>
+            <option value="Quality Control"> Quality Control </option>
+            <option value="Broadcast"> Broadcast </option>
+            <option value="Journalism"> Journalism </option>
+            <option value="Hotel-Hospitality"> Hotel-Hospitality </option>
+            <option value="Real Estate"> Real Estate </option>
+            <option value="Business Development"> Business Development </option>
+            <option value="Human Resources"> Human Resources </option>
+            <option value="Research"> Research </option>
+            <option value="Construction"> Construction </option>
+            <option value="Information Technology"> Information Technology </option>
+            <option value="Restaurant-Food Service"> Restaurant-Food Service </option>
+            <option value="Consultant"> Consultant </option>
+            <option value="Installation- Maint- Repair"> Installation- Maint- Repair </option>
+            <option value="Retail/Customer Service"> Retail/Customer Service </option>
+            <option value="Insurance"> Insurance </option>
+            <option value="Sales"> Sales </option>
+            <option value="Design"> Design </option>
+            <option value="Inventory"> Inventory </option>
+            <option value="Science"> Science </option>
+            <option value="Distribution-Shipping"> Distribution-Shipping </option>
+            <option value="Legal"> Legal </option>
+            <option value="Skilled Labor- Trades"> Skilled Labor- Trades </option>
+            <option value="Education"> Education </option>
+            <option value="Teaching"> Teaching </option>
+            <option value="Legal Admin"> Legal Admin </option>
+            <option value="Strategy"> Strategy </option>
+            <option value="Planning"> Planning </option>
+            <option value="Engineering"> Engineering </option>
+            <option value="Management"> Management </option>
+            <option value="Supply Chain"> Supply Chain </option>
+            <option value="Manufacturing"> Manufacturing </option>
+            <option value="Telecommunications"> Telecommunications </option>
+            <option value="Executive"> Executive </option>
+            <option value="Marketing"> Marketing </option>
+            <option value="Training"> Training </option>
+            <option value="Facilities"> Facilities </option>
+            <option value="Media- Journalism- Newspaper"> Media- Journalism- Newspaper </option>
+            <option value="Transportation"> Transportation </option>
+            <option value="Finance"> Finance </option>
+            <option value="Nonprofit - Social Services"> Nonprofit - Social Services </option>
+            <option value="Warehouse"> Warehouse </option>
+            <option value="Franchise"> Franchise </option>
+          </select>
+        </div>
+        <!--end industry2-->
+
+        <!-- skills-->
+        <div class="form-group" show-errors>
+          <label for="skills">Acquired Skills (Describe the top 3 skills you have obtained in your previous work experience) </label>
+          <textarea type="text" id="skills" name="skills" class="form-control" ng-model="vm.user.skills" placeholder="Acquired Skills"> </textarea>
+        </div>
+        <!-- end skills -->
+
+        <!-- acquire skills-->
+        <div class="form-group" show-errors>
+          <label for="acquireskills"> What industry would you like to acquire skills in? </label>
+          <textarea type="text" id="acquireskills" name="acquireskills" class="form-control" ng-model="vm.user.acquireskills" placeholder="List Industries Here"> </textarea>
+        </div>
+        <!-- end  acquire skills -->
+
+        <!-- explain-->
+        <div class="form-group" show-errors>
+          <label for="explain"> Explain in detail the skills you would like to acquire. </label>
+          <textarea type="text" id="explain" name="acquireskills" class="form-control" ng-model="vm.user.explain"> </textarea>
+        </div>
+        <!-- end  explain -->
+
+
+
+
+
+
+        <div class="text-center form-group">
+          <button type="submit" class="btn btn-primary">Save Skills</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</section>

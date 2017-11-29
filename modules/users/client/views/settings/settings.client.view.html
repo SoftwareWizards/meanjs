@@ -17,6 +17,25 @@
         <li ui-sref-active="active">
           <a ui-sref="settings.accounts">Manage Social Accounts</a>
         </li>
+
+        <!--added demographics-->
+        <li ui-sref-active="active" ng-hide="vm.user.roles !='climber'">
+          <a ui-sref="settings.demographics">Edit Demographics</a>
+        </li>
+
+        <!--added skills-->
+        <li ui-sref-active="active" ng-hide="vm.user.roles !='climber'">
+          <a ui-sref="settings.skills">Edit Skills</a>
+        </li>
+
+        <!-- billing for builder only -->
+        <li ui-sref-active="active" ng-hide="vm.user.roles !='builder'">
+          <a ui-sref="settings.billing">Edit Billing Information</a>
+        </li>
+        <!--added payment info-->
+        <li ui-sref-active="active" ng-hide="vm.user.roles !='climber'">
+          <a ui-sref="settings.payment">Edit Payment Information</a>
+        </li>
       </ul>
     </nav>
     <div class="col-sm-9 col-md-8 settings-view">

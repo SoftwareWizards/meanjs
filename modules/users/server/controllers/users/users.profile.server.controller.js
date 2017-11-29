@@ -16,7 +16,11 @@ var _ = require('lodash'),
   User = mongoose.model('User'),
   validator = require('validator');
 
-var whitelistedFields = ['firstName', 'lastName', 'email', 'username','program', 'gender', 'age','phone', 'prefer'];
+var whitelistedFields = ['firstName', 'lastName', 'email', 'username','program', 'gender', 'age','phone',
+  'prefer', 'education', 'transport', 'area', 'status', 'assistance', 'disability', 'income', 'ifPhone',
+'address', 'city', 'zipcode', 'country', 'industry1', 'industry2', 'skills', 'acquireskills', 'explain',
+'payment', 'addressclimber', 'cityclimber', 'stateclimber', 'zipcodeclimber', 'countryclimber', 'nameOnAccount',
+'accountNumber', 'paypalemail', 'paypalphone', 'address', 'city', 'state', 'zipcode', 'country'];
 
 var useS3Storage = config.uploads.storage === 's3' && config.aws.s3;
 var s3;
