@@ -1,5 +1,6 @@
 <section>
   <link rel="stylesheet" type="text/css" href="~/WebstormProjects/meanjs/modules/tasks/client/css/tasks.css">
+
   <div class="page-header">
 
     <h1>{{vm.task._id ? 'Edit Task' : 'Create A New Task'}}</h1>
@@ -34,6 +35,12 @@
           <label class="control-label" for="priority">Enter Demographic Priority (Homeless, Battered Women, Alcoholics, Other)</label>
           <input name="priority" type="text" ng-model="vm.task.priority" id="priority" class="form-control" placeholder="Demographic Priority" required>
         </div>
+
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="compensation">Compensation</label>
+          <input name="compensation" type="text" ng-model="vm.task.compensation" id="compensation" class="form-control" placeholder="$$$" required>
+        </div>
         <!-- Text box for Demographic Priority
         <div class="form-group" show-errors>
           <label class="control-label" for="priority">Enter Demographic Priority</label>
@@ -48,13 +55,23 @@
         </div>
         -->
 
-        <div class="form-group">
+        <!--<div class="form-group">
           <button type="submit" class="btn btn-default">{{vm.task._id ? 'Update' : 'Create'}}</button>
-        </div>
+        </div>-->
+
+        <div id="paypal-button"></div>
+
+        <div data-ng-controller="TasksController" data-ng-init="init()"></div>
+
         <div ng-show="vm.error" class="text-danger">
           <strong ng-bind="vm.error"></strong>
         </div>
       </fieldset>
     </form>
   </div>
+
+  <!--<script>
+
+  </script>-->
+
 </section>
