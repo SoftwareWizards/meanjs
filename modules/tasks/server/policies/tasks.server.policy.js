@@ -5,6 +5,8 @@
  */
 var acl = require('acl');
 
+
+
 // Using the memory backend
 acl = new acl(new acl.memoryBackend());
 
@@ -72,3 +74,6 @@ exports.isAllowed = function (req, res, next) {
     }
   });
 };
+
+
+

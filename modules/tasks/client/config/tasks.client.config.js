@@ -29,5 +29,12 @@
       state: 'tasks.create',
       roles: ['admin', 'builder']
     });
+
+    // lists builder's tasks and climber's accepted tasks
+    menuService.addSubMenuItem('topbar', 'tasks', {
+      title: 'My Tasks',
+      state: 'tasks.mytasks',
+      roles: ['climber', 'builder']
+    });
   }
 }());

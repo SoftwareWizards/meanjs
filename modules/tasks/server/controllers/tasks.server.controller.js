@@ -11,6 +11,7 @@ var path = require('path'),
 
 
 
+
 /**
  * Create a Task
  */
@@ -41,7 +42,9 @@ exports.read = function(req, res) {
   task.isCurrentUserOwner = req.user && task.user && task.user._id.toString() === req.user._id.toString();
 
   res.jsonp(task);
-};
+
+  };
+
 
 /**
  * Update a Task
@@ -123,3 +126,4 @@ exports.taskByID = function(req, res, next, id) {
 
 
 };
+

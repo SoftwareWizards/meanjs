@@ -26,6 +26,20 @@
           pageTitle: 'Tasks List'
         }
       })
+      //added mytasks
+      .state('tasks.mytasks', {
+        url: '',
+        templateUrl: 'modules/tasks/client/views/list-mytasks.client.view.html',
+        controller: 'TasksListController',
+        controllerAs: 'vm',
+        data: {
+
+          //added this line
+          roles: ['user', 'admin','builder', 'climber'],
+          pageTitle: 'My Tasks List'
+        }
+      })
+      //end mytasks
       .state('tasks.create', {
         url: '/create',
         templateUrl: 'modules/tasks/client/views/form-task.client.view.html',
