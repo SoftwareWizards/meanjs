@@ -22,7 +22,6 @@ Then, open up the browser of your choice and type in localhost:3000
 
 Hit enter and your app should be running locally!
 
-
 All other branches will be created from develop.
 
 [![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
