@@ -1,4 +1,4 @@
-Our app can be found via Heroku [Heroku link]
+Our app can be found via Heroku [http://my-ladder.herokuapp.com/]
 
 **********************************************
 
