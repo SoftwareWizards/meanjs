@@ -12,7 +12,9 @@ want to install Grunt. You can find how to do this at the following links:
 https://www.npmjs.com/get-npm
 https://gruntjs.com/getting-started
 
-Next, clone this repository and then navigate to it on your local machine.
+Next, clone this repository (https://github.com/SoftwareWizards/meanjs) make sure it is on branch Backup.
+
+Then navigate to it on your local machine.
 
 Open up the Terminal if you are on Mac or the Command Prompt if you are on Windows.
 
