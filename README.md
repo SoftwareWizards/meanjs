@@ -1,3 +1,29 @@
+Our app can be found via Heroku [http://my-ladder.herokuapp.com/]
+
+**********************************************
+
+***    How to run the project locally.    ****
+
+**********************************************
+
+First, make sure you have Node and NPM installed. You will also
+want to install Grunt. You can find how to do this at the following links:
+
+https://www.npmjs.com/get-npm
+https://gruntjs.com/getting-started
+
+Next, clone this repository (https://github.com/SoftwareWizards/meanjs) make sure it is on branch Backup.
+
+Then navigate to it on your local machine.
+
+Open up the Terminal if you are on Mac or the Command Prompt if you are on Windows.
+
+Type in node server.js
+
+Then, open up the browser of your choice and type in localhost:3000
+
+Hit enter and your app should be running locally!
+
 All other branches will be created from develop.
 
 [![MEAN.JS Logo](http://meanjs.org/img/logo-small.png)](http://meanjs.org/)
