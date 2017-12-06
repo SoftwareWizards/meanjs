@@ -34,6 +34,17 @@ var TaskSchema = new Schema({
     required: 'Please fill Task priority',
     trim: true
   },
+  compensation: {
+    type: Number,
+    min: 1,
+    required: 'Compensation required',
+    trim: true
+  },
+  paymentId: {
+    type: String,
+    required: 'Payment required.',
+    trim: true
+  },
   created: {
     type: Date,
     default: Date.now
