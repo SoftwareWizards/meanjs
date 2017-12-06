@@ -39,6 +39,8 @@ We would like to thank:
 
 - Climbers can view the list of tasks
 
+- App adjusts to different size windows
+
 *********************************************************
 *														*
 *            How to run the project locally			    *

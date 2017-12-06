@@ -147,6 +147,9 @@ th, td {
 	width: 30%;
 }
 
+p {
+	padding: 5%;
+}
 .lead {
 max-width: 50%;
 float: center;
