@@ -2,7 +2,7 @@
   'use strict';
 
   angular
-    .module('tasks')
+    .module('tasks.routes')
     .config(routeConfig);
 
   routeConfig.$inject = ['$stateProvider'];
@@ -35,9 +35,7 @@
           taskResolve: newTask
         },
         data: {
-
-          roles: ['user', 'admin','builder'],
-          pageTitle: 'Tasks Create'
+          roles: ['user', 'admin','builder']
         }
       })
       .state('tasks.edit', {

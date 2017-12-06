@@ -6,7 +6,7 @@
   </div>
   <h4>Welcome! Create your task to give someone a life-changing opportunity! </h4> <br />
   <div class="col-md-12">
-    <form name="vm.form.taskForm" class="form-horizontal" ng-submit="vm.save(vm.form.taskForm.$valid)" novalidate>
+    <form id="taskForm" name="vm.form.taskForm" class="form-horizontal" ng-submit="vm.save(vm.form.taskForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
           <label class="control-label" for="name">Enter Your Task Name</label>
@@ -30,8 +30,8 @@
           <select name="level" ng-model="vm.post.level" id= "level" class="form-control" required>
             <option value = ""> --- Please select --- </option>
             <option value = "Beginner"> Beginner</option>
-            <option value = "Novice"> Battered Women</option>
-            <option value = "Skilled"> Recovering Addicts</option>
+            <option value = "Novice"> Novice</option>
+            <option value = "Skilled"> Skilled</option>
           </select>
         </div>
 <!--
@@ -39,6 +39,13 @@
           <label class="control-label" for="priority">Enter Demographic Priority (Homeless, Battered Women, Alcoholics, Other)</label>
           <input name="priority" type="text" ng-model="vm.task.priority" id="priority" class="form-control" placeholder="Demographic Priority" required>
         </div>
+
+
+        <div class="form-group" show-errors>
+          <label class="control-label" for="compensation">Compensation</label>
+          <input name="compensation" type="text" ng-model="vm.task.compensation" id="compensation" class="form-control" placeholder="$$$" required>
+        </div>
+        <!-- Text box for Demographic Priority
 
         -->
         <!-- Dropdown for Demographic Priority-->
@@ -64,8 +71,13 @@
 
 
         <div class="form-group">
-          <button type="submit" class="btn btn-default">{{vm.task._id ? 'Update' : 'Create'}}</button>
+          <button id="taskSubmit" name="taskSubmit" style="display: none;" type="submit" class="btn btn-default">{{vm.task._id ? 'Update' : 'Create'}}</button>
         </div>
+
+        <div id="paypal-button"></div>
+
+        <!--<div data-ng-controller="TasksController" data-ng-init="init()"></div>-->
+
         <div ng-show="vm.error" class="text-danger">
           <strong ng-bind="vm.error"></strong>
         </div>
