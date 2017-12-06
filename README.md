@@ -5,7 +5,7 @@
 *********************************************************
 
 
-Our app can be found via Heroku at [http://my-ladder.herokuapp.com/]
+The My-Ladder app can be found via Heroku at [http://my-ladder.herokuapp.com/]
 
 *********************************************************
 *														*
@@ -41,6 +41,8 @@ We would like to thank:
 
 - App adjusts to different size windows
 
+- Paypal API was included so the money submitted by the climber can easily be tranferred to builder once task is complete.
+
 *********************************************************
 *														*
 *            How to run the project locally			    *
@@ -71,7 +73,7 @@ Hit enter and your app should be running locally!
 *														*
 *********************************************************
 
-Our project has used MLab for the underlying database technology.
+The My-Ladder project has used MLab for the underlying database technology.
 
 From the root folder, navigate to server -> config -> config.js
 
