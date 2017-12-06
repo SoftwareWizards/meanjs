@@ -154,3 +154,7 @@ p {
 max-width: 50%;
 float: center;
 }
+
+input {
+	width: 50%;
+}
