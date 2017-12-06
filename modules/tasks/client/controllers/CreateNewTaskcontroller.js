@@ -90,86 +90,88 @@
 		$scope.posts.splice( index, 1 );
 	};
 
-    $scope.$on('$viewContentLoaded', function(){
+	$scope.$on('$viewContentLoaded', function(){
       // Run after view loaded.
-    //$scope.init = function () {
-    paypal.Button.render({
+    if(!vm.task._id) {
 
-      client: {
-        sandbox:    'AZAkAETjtRkBnDahhdZbAZawBk5LvHNGjTga_PnOqSVBx_B58rB2gkrmxiGDWd6aRt4JdZ0oxuOtsFiu', // from https://developer.paypal.com/developer/applications/
-        production: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'  // from https://developer.paypal.com/developer/applications/
-      },
-      env: 'sandbox', // sandbox Or 'production',
+      paypal.Button.render({
 
-      commit: true, // Show a 'Pay Now' button
+        client: {
+          sandbox: 'AZAkAETjtRkBnDahhdZbAZawBk5LvHNGjTga_PnOqSVBx_B58rB2gkrmxiGDWd6aRt4JdZ0oxuOtsFiu', // from https://developer.paypal.com/developer/applications/
+          production: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'  // from https://developer.paypal.com/developer/applications/
+        },
+        env: 'sandbox', // sandbox Or 'production',
 
-      style: {
-        label: 'pay',  // checkout | credit | pay | buynow | generic
-        size:   'responsive', // tiny | small | medium | large | responsive
-        color:  'silver',   // gold | blue | silver | black | orange
-        shape:  'pill'    // pill | rect
-      },
+        commit: true, // Show a 'Pay Now' button
 
-      payment: function(data, actions) {
-        /*
-         * Set up the payment here
-         */
+        style: {
+          label: 'pay',  // checkout | credit | pay | buynow | generic
+          size: 'responsive', // tiny | small | medium | large | responsive
+          color: 'silver',   // gold | blue | silver | black | orange
+          shape: 'pill'    // pill | rect
+        },
 
-        var compensation = document.getElementById('compensation').value;
-        var name = document.getElementById('name').value;
-        var type = document.getElementById('type').value;
-        return actions.payment.create({
+        payment: function (data, actions) {
+          /*
+           * Set up the payment here
+           */
 
-          transactions: [
-            {
-              amount: {
-                total: compensation,
-                currency: 'USD'
-              },
-              item_list: {
-                items: [
-                  {
-                    name: name,
-                    description: type,
-                    quantity: 1,
-                    currency: 'USD',
-                    price: compensation
-                  }
-                ]
+          var compensation = document.getElementById('compensation').value;
+          var name = document.getElementById('name').value;
+          var type = document.getElementById('type').value;
+          return actions.payment.create({
+
+            transactions: [
+              {
+                amount: {
+                  total: compensation,
+                  currency: 'USD'
+                },
+                item_list: {
+                  items: [
+                    {
+                      name: name,
+                      description: type,
+                      quantity: 1,
+                      currency: 'USD',
+                      price: compensation
+                    }
+                  ]
+                }
               }
-            }
-          ]
-        });
-      },
+            ]
+          });
+        },
 
-      onAuthorize: function(data, actions) {
-        /*
-         * Execute the payment here
-         */
-        return actions.payment.execute().then(function(response) {
-          console.log('The payment was completed!');
-          console.log(response);
-          vm.task.paymentId = response['id'];
-          console.log(vm.task.paymentId);
-          document.getElementById('taskSubmit').click();
-        });
-      },
+        onAuthorize: function (data, actions) {
+          /*
+           * Execute the payment here
+           */
+          return actions.payment.execute().then(function (response) {
+            console.log('The payment was completed!');
+            console.log(response);
+            vm.task.paymentId = response['id'];
+            console.log(vm.task.paymentId);
+            document.getElementById('taskSubmit').click();
+          });
+        },
 
-      onCancel: function(data, actions) {
-        /*
-         * Buyer cancelled the payment
-         */
-        console.log('The payment was cancelled!');
-      },
+        onCancel: function (data, actions) {
+          /*
+           * Buyer cancelled the payment
+           */
+          console.log('The payment was cancelled!');
+        },
 
-      onError: function(err) {
-        /*
-         * An error occurred during the transaction
-         */
-        console.log('The payment failed!');
-      }
+        onError: function (err) {
+          /*
+           * An error occurred during the transaction
+           */
+          console.log('The payment failed!');
+        }
 
-    }, '#paypal-button');
+      }, '#paypal-button');
+    }
   });
   }
 }());
