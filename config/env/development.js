@@ -83,7 +83,14 @@ module.exports = {
           email: 'admin@localhost.com',
           firstName: 'Admin',
           lastName: 'Local',
-          roles: ['admin', 'user']
+          roles: ['admin', 'user', 'climber', 'builder']
+          //added stuff below
+         /* program: 'FBI',
+          gender: 'male',
+          age: '20',
+          phone: '11111111',
+          prefer: 'none'
+*/
         }
       }, {
         // Set to true to overwrite this document

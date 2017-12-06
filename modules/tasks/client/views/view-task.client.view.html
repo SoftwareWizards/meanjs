@@ -1,9 +1,22 @@
 <section>
-  <div class="page-header">
+
+<!--added the ng-shows to this line
+  //still need to figure out how not to shield it from climbers -->
+
+ <span ng-show="vm.task.isCurrentUserOwner">
+
+
+
     <h1><span ng-bind="vm.task.name"></span> <small>Skill Level:</small> <small ng-bind = "vm.task.level"></small></h1>
     <div ng-bind="vm.task.type"></div>
     <small>Compensation: $</small><small ng-bind = "vm.task.compensation"></small>
   </div>
+
+
+</span>
+
+
+
   <div class="pull-right"
        ng-show="vm.task.isCurrentUserOwner">
     <a class="btn btn-primary"
@@ -24,5 +37,7 @@
       <span ng-if="!vm.task.user">Deleted User</span>
     </em>
   </small>
+
   <p class="lead" ng-bind="vm.task.content"></p>
+
 </section>

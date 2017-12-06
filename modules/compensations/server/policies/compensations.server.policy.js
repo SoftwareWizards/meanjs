@@ -22,7 +22,8 @@ exports.invokeRolesPolicies = function () {
       permissions: '*'
     }]
   }, {
-    roles: ['user'],
+    //added builder and climber here
+    roles: ['user', 'builder', 'climber'],
     allows: [{
       resources: '/api/compensations',
       permissions: ['get', 'post']

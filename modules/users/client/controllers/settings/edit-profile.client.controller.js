@@ -13,6 +13,8 @@
     vm.user = Authentication.user;
     vm.updateUserProfile = updateUserProfile;
 
+
+
     // Update a user profile
     function updateUserProfile(isValid) {
 
@@ -32,6 +34,7 @@
       }, function (response) {
         Notification.error({ message: response.data.message, title: '<i class="glyphicon glyphicon-remove"></i> Edit profile failed!' });
       });
+
     }
   }
 }());

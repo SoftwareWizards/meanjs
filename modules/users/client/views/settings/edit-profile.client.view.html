@@ -31,6 +31,163 @@
             <p class="help-block error-text" ng-message="required">Username is required.</p>
           </div>
         </div>
+
+        <div class="form-group" show-errors>
+          <label for="username">Program</label>
+          <input type="text" id="program" name="program" class="form-control" ng-model="vm.user.program" placeholder="Program" lowercase required>
+          <div ng-messages="vm.userForm.program.$error" role="alert">
+            <p class="help-block error-text" ng-message="required">Program is required.</p>
+          </div>
+        </div>
+
+        <!--gender-->
+        <div class="form-group" show-errors>
+          <label for="gender">Gender </label>
+          <select type="text" id="gender" name="gender" class="form-control" ng-model="vm.user.gender" required>
+            <option value=""> --- Please Select --- </option>
+            <option value="Male"> Male </option>
+            <option value="Female"> Female </option>
+            <option value="Prefer Not to Say"> Prefer Not to Say</option>
+          </select>
+        </div>
+        <!--end gender-->
+
+        <!--age-->
+        <div class="form-group" show-errors>
+          <label for="age">Age </label>
+          <select type="text" id="age" name="age" class="form-control" ng-model="vm.user.age" required>
+            <option value=""> --- Please Select --- </option>
+            <option value="18-24"> 18-24 </option>
+            <option value="25-29"> 25-29 </option>
+            <option value="30-34"> 30-34 </option>
+            <option value="35-39"> 35-39 </option>
+            <option value="40-44"> 40-44 </option>
+            <option value="45-49"> 45-49 </option>
+            <option value="50-54"> 50-54 </option>
+            <option value="55+"> 55+ </option>
+          </select>
+        </div>
+        <!--end age-->
+
+        <!-- phone number -->
+        <div class="form-group" show-errors>
+          <label for="phone">Phone Number</label>
+          <input type="text" id="phone" name="phone" class="form-control" ng-model="vm.user.phone" placeholder="Phone Number" maxlength="10" required>
+        </div>
+        <!-- end phone number -->
+
+        <!--preferred contact-->
+        <div class="form-group" show-errors>
+          <label for="prefer">Prefer contact by phone or email? </label>
+          <select type="text" id="prefer" name="prefer" class="form-control" ng-model="vm.user.prefer" required>
+            <option value=""> --- Please Select --- </option>
+            <option value="Phone"> Phone </option>
+            <option value="Email"> Email </option>
+          </select>
+        </div>
+        <!--end preferred contact-->
+
+        <!--ifPhone-->
+        <div class="form-group" show-errors>
+          <label for="ifPhone"> If you prefer contact by phone, please enter preference </label>
+          <select type="text" id="ifPhone" name="ifPhone" class="form-control" ng-model="vm.credentials.ifPhone">
+            <option value=""> --- Please Select --- </option>
+            <option value="Text"> Text </option>
+            <option value="Call"> Call </option>
+            <option value="No Preference"> No Preference </option>
+          </select>
+        </div>
+        <!--end ifPhone--><br />
+        <h4>Address</h4>
+        <div class="form-group" show-errors>
+
+          <input type="text" id="address" name="address" class="form-control" ng-model="vm.credentials.address" placeholder="Street Address">
+
+          </input>
+        </div>
+        <!--end billing address -->
+        <!--city  -->
+
+        <div class="form-group" show-errors>
+          <input type="text" id="city" name="city" class="form-control" ng-model="vm.credentials.city" placeholder="City">
+
+          </input>
+        </div>
+        <!--end city -->
+        <!--state-->
+        <div class="form-group" show-errors>
+
+
+          <select type="text" id="state" name="state" class="form-control" ng-model="vm.credentials.state" >
+
+            <option value=""> --- Select State --- </option>
+            <option value="AK"> AK </option>
+            <option value="AL"> AL </option>
+            <option value="AR"> AR </option>
+            <option value="AZ"> AZ </option>
+            <option value="CA"> CA </option>
+            <option value="CO"> CO </option>
+            <option value="CT"> CT </option>
+            <option value="DC"> DC </option>
+            <option value="DE"> DE </option>
+            <option value="FL"> FL </option>
+            <option value="GA"> GA </option>
+            <option value="HI"> HI </option>
+            <option value="IA"> IA </option>
+            <option value="ID"> ID </option>
+            <option value="IL"> IL </option>
+            <option value="IN"> IN </option>
+            <option value="KS"> KS </option>
+            <option value="KY"> KY </option>
+            <option value="LA"> LA </option>
+            <option value="MA"> MA </option>
+            <option value="MD"> MD </option>
+            <option value="ME"> ME </option>
+            <option value="MI"> MI </option>
+            <option value="MN"> MN </option>
+            <option value="MO"> MO </option>
+            <option value="MS"> MS </option>
+            <option value="MT"> MT </option>
+            <option value="NC"> NC </option>
+            <option value="ND"> ND </option>
+            <option value="NE"> NE </option>
+            <option value="NH"> NH </option>
+            <option value="NJ"> NJ </option>
+            <option value="NM"> NM </option>
+            <option value="NV"> NV </option>
+            <option value="NY"> NY </option>
+            <option value="OH"> OH </option>
+            <option value="OK"> OK </option>
+            <option value="OR"> OR </option>
+            <option value="PA"> PA </option>
+            <option value="RI"> RI </option>
+            <option value="SC"> SC </option>
+            <option value="SD"> SD </option>
+            <option value="TN"> TN </option>
+            <option value="TX"> TX </option>
+            <option value="UT"> UT </option>
+            <option value="VA"> VA </option>
+            <option value="VT"> VT </option>
+            <option value="WA"> WA </option>
+            <option value="WI"> WI </option>
+            <option value="WV"> WV </option>
+            <option value="WY"> WY </option>
+          </select>
+        </div>
+        <!--end state-->
+
+        <!-- zip code -->
+        <div class="form-group" show-errors>
+
+          <input type="text" id="zipcode" name="zipcode" class="form-control" ng-model="vm.credentials.zipcode" placeholder="Zip Code" maxlength="5">
+        </div>
+        <!-- end zip code -->
+
+        <!-- country -->
+        <div class="form-group" show-errors>
+          <input type="text" id="country" name="country" class="form-control" ng-model="vm.credentials.country" placeholder="Country">
+        </div>
+        </span>
         <div class="text-center form-group">
           <button type="submit" class="btn btn-primary">Save Profile</button>
         </div>

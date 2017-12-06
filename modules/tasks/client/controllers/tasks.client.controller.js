@@ -6,10 +6,11 @@
   angular
     .module('tasks')
     .controller('TasksController', TasksController);
+  //added Upload and $timeout to inject
 
-  TasksController.$inject = ['$scope', '$state', '$window', 'Authentication', 'taskResolve'];
+  TasksController.$inject = ['$scope', '$state', '$window', 'Authentication', 'taskResolve', 'Upload', '$timeout'];
 
-  function TasksController ($scope, $state, $window, Authentication, task) {
+  function TasksController ($scope, $state, $window, Authentication, task, Upload, $timeout) {
     var vm = this;
 
     vm.authentication = Authentication;
@@ -50,6 +51,39 @@
         vm.error = res.data.message;
       }
     }
+
+    //upload controller below
+
+    $scope.onFileSelect = function(image) {
+      $scope.uploadInProgress = true;
+      $scope.uploadProgress = 0;
+
+      if (angular.isArray(image)) {
+        image = image[0];
+      }
+
+      $scope.upload = $upload.upload({
+        url: '/api/tasks/upload',
+        method: 'POST',
+        data: {
+          type: 'task'
+        },
+        file: image
+      }).progress(function(event) {
+        $scope.uploadProgress = Math.floor(event.loaded / event.total);
+        $scope.$apply();
+      }).success(function(data, status, headers, config) {
+        AlertService.success('Document uploaded!');
+      }).error(function(err) {
+        $scope.uploadInProgress = false;
+        AlertService.error('Error uploading file: ' + err.message || err);
+      });
+    };
+
+
+
   }
+
+
 }());
 */

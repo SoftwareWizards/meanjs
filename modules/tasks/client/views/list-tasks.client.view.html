@@ -2,14 +2,18 @@
   <div class="page-header">
     <h1>Tasks</h1>
   </div>
-  <!--Search bar: implement 'filterObj' object used to filter posts -->
-  <input type="text" class="form-control" placeholder="Search" ng-model="filterObj.$">
+  <!--Search bar -->
+  <input type="text" class="form-control" placeholder="Search" ng-model="vm.search" ng-change="vm.figureOutItemsToDisplay()">
 
 
-  <div class="list-group">
-    <a ng-repeat="task in vm.tasks"
+
+<!--added ng-show here but need to how not shield it from climbers-->
+
+  <div class="list-group" >
+
+    <a ng-repeat="task in vm.tasks |filter: vm.search"
        ui-sref="tasks.view({ taskId: task._id })"
-       class="list-group-item">
+       class="list-group-item" >
       <small class="list-group-item-text">
         Posted on
         <span ng-bind="task.created | date:'mediumDate'"></span>
@@ -20,8 +24,9 @@
       <h4 class="list-group-item-heading" ng-bind="task.name"></h4>
     </a>
   </div>
+
   <!-- new changes start here -->
-  <span ng-if="!task.climber">
+  <span ng-hide="vm.task.roles ==='climber'">
   <div class="alert alert-warning text-center" ng-if="vm.tasks.$resolved && !vm.tasks.length">
     No Tasks yet, why don't you <a ui-sref="tasks.create">create one</a>?
   </div>

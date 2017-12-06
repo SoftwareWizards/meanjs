@@ -9,6 +9,8 @@ var path = require('path'),
   errorHandler = require(path.resolve('./modules/core/server/controllers/errors.server.controller')),
   _ = require('lodash');
 
+
+
 /**
  * Create a Task
  */
@@ -92,6 +94,7 @@ exports.list = function(req, res) {
   });
 };
 
+
 /**
  * Task middleware
  */
@@ -114,4 +117,9 @@ exports.taskByID = function(req, res, next, id) {
     req.task = task;
     next();
   });
+
+  //for file upload
+
+
+
 };
