@@ -10,7 +10,7 @@
     <form id="taskForm" name="vm.form.taskForm" style="width: 70%" class="form-horizontal" ng-submit="vm.save(vm.form.taskForm.$valid)" novalidate>
       <fieldset>
         <div class="form-group" show-errors>
-          <label class="control-label" for="name">Enter Your Task Name</label>
+          <label class="control-label" for="name">Task Name</label>
           <input name="name" type="text" ng-model="vm.task.name" id="name" class="form-control" placeholder="Task Name" required>
           <div ng-messages="vm.form.taskForm.name.$error" role="alert">
             <!-- optional error message
@@ -21,13 +21,13 @@
 
         <!-- Text box for task type name -->
         <div class="form-group" show-errors>
-          <label class="control-label" for="type">Enter Your Task Type</label>
+          <label class="control-label" for="type">Task Type</label>
           <input name="type" type="text" ng-model="vm.task.type" id="type" class="form-control" placeholder="Task Type" required>
         </div>
 
         <!-- Dropdown for skill level -->
         <div class="form-group" show-errors>
-          <label class="control-label" for="level">Enter Skill Level</label>
+          <label class="control-label" for="level">Skill Level</label>
           <select name="level" ng-model="vm.post.level" id= "level" class="form-control" required>
             <option value = ""> --- Please select --- </option>
             <option value = "Beginner"> Beginner</option>
@@ -49,7 +49,7 @@
         -->
         <!-- Dropdown for Demographic Priority-->
         <div class="form-group" show-errors>
-          <label class="control-label" for="priority">Enter Demographic Priority</label>
+          <label class="control-label" for="priority">Demographic Priority</label>
           <select name="priority" ng-model="vm.post.priority" id= "priority" class="form-control" placeholder="Demographic Priority" required>
           <option value = ""> --- Please select --- </option>
           <option value = "Homeless"> Homeless</option>
