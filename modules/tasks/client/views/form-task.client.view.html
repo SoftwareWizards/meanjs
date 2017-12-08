@@ -2,13 +2,13 @@
   <link rel="stylesheet" type="text/css" href="~/meanjs/modules/core/client/css/core.css">
   <div class="page-header" align="center">
     <img src="http://www.seanboisselle.com/files/hammer.png" class="img-circle" height=100px width="100px" align="center">
-    <h1>{{vm.task._id ? 'Edit Task' : 'Create A New Task'}}</h1>
+    <h1 class="taskform">{{vm.task._id ? 'Edit Task' : 'Create A New Task'}}</h1>
   </div>
 
   <div class="col-md-12" align="center">
-    <h4>Welcome! Create your task to give someone a life-changing opportunity! </h4> <br />
+    <h4 class ="taskform">Welcome! Create your task to give someone a life-changing opportunity! </h4> <br />
     <form id="taskForm" name="vm.form.taskForm" style="width: 70%" class="form-horizontal" ng-submit="vm.save(vm.form.taskForm.$valid)" novalidate>
-      <fieldset>
+      <fieldset class="taskform">
         <div class="form-group" show-errors>
           <label class="control-label" for="name">Task Name</label>
           <input name="name" type="text" ng-model="vm.task.name" id="name" class="form-control" placeholder="Task Name" required>

@@ -14,8 +14,8 @@
 }
 
 .jumbotron {
-	border-style: groove;
-	border-color: sienna;
+	/*border-style: groove;*/
+	/*border-color: sienna;*/
 	background-color: beige;
 	color: black;
 }
@@ -55,11 +55,11 @@
 
 section {
 	border-color: #7fff27;
-	background-color: burlywood;
+	background-color: #003840;
 }
 
 body {
-	background-color: burlywood ;
+	background-color: #003840 ;
 }
 .header-profile-image {
   border-radius: 50%;
@@ -96,7 +96,7 @@ a:hover .header-profile-image {
 	background-image: -webkit-linear-gradient(top, rgba(172, 51, 221, 0.25) 0%, #84ccc3 100%);
 	background-image: -o-linear-gradient(top, #912416 0%, #f6ff00 100%);
 	background-image: -webkit-gradient(linear, left top, left bottom, from(#9e354a), to(#25ff00));
-	background-image: linear-gradient(to bottom, #003840 0%, #003840 100%);
+	background-image: linear-gradient(to bottom, black 0%, black 100%);
 	background-color: #222;
 	border-color: #003840;
 }
@@ -129,9 +129,9 @@ table {
 
 .stepcolumn {
 	column-span: all;
-	background-color: sienna;
-	font-size: 20px;
-	line-height: 10%;
+	background-color: black;
+	font-size: 25px;
+	line-height: 15%;
 	color: white;
 }
 
@@ -157,4 +157,8 @@ float: center;
 
 input {
 	width: 50%;
+}
+
+.taskform {
+	color: lightblue;
 }
