@@ -9,6 +9,7 @@
 
   function menuConfig(menuService) {
     // Set top bar menu items
+    /*
     menuService.addMenuItem('topbar', {
       title: 'Builders',
       state: 'builders',
@@ -16,7 +17,7 @@
       // need to change roles so only admin can see this
       roles: ['admin']
     });
-
+*/
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'builders', {
       title: 'List Builders',

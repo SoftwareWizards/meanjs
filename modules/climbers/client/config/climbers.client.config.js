@@ -9,12 +9,14 @@
 
   function menuConfig(menuService) {
     // Set top bar menu items
+    /*
     menuService.addMenuItem('topbar', {
       title: 'Climbers',
       state: 'climbers',
       type: 'dropdown',
       roles: ['admin']
     });
+    */
 
     // Add the dropdown list item
     menuService.addSubMenuItem('topbar', 'climbers', {
