@@ -7,11 +7,11 @@ The My-Ladder app can be found via Heroku at [http://my-ladder.herokuapp.com/]
 
 We would like to thank:
 
-	- MIT [The MIT License](LICENSE.md)
-	- The Mean JS Org for the MEAN boilerplate,
-	- Twitter for Bootstrap and Bower.
-							
-            Features implemented            		    
+- MIT [The MIT License](LICENSE.md)
+- The Mean JS Org for the MEAN boilerplate,
+- Twitter for Bootstrap and Bower.
+	
+	  Features implemented            		    
 													
 - Unregistered users can sign up
 
