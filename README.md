@@ -1,9 +1,5 @@
-*********************************************************
-*														*
-*                 LINK TO DEPLOYED PAGE	  		 	    *
-*														*
-*********************************************************
 
+*                 LINK TO DEPLOYED PAGE	  		 	    *
 
 The My-Ladder app can be found via Heroku at [http://my-ladder.herokuapp.com/]
 
@@ -43,6 +39,9 @@ We would like to thank:
 
 - Paypal API was included so the money submitted by the climber can easily be tranferred to builder once task is complete.
 
+Landing Page:
+
+![Landing Page](http://seanboisselle.com/files/landing.png "Landing Page Screenshot")
 *********************************************************
 *														*
 *            How to run the project locally			    *
@@ -67,8 +66,8 @@ Then, open up the browser of your choice and type in localhost:3000
 
 Hit enter and your app should be running locally!
 
-*********************************************************
-*														*
+
+*														
 *    How to update database and server connections      *
 *														*
 *********************************************************
