@@ -1,26 +1,18 @@
 
-                 LINK TO DEPLOYED PAGE	  		 	    *
+                 LINK TO DEPLOYED PAGE	  		 	    
 
 The My-Ladder app can be found via Heroku at [http://my-ladder.herokuapp.com/]
-
-*********************************************************
-*														*
-*            Credited People and Organizations 		    *
-*														*
-*********************************************************
+							
+            Credited People and Organizations 		    
 
 We would like to thank:
 
 	- MIT [The MIT License](LICENSE.md)
 	- The Mean JS Org for the MEAN boilerplate,
 	- Twitter for Bootstrap and Bower.
-
-*********************************************************
-*														*
-*            Features implemented            		    *
-*														*
-*********************************************************
-
+							
+            Features implemented            		    
+													
 - Unregistered users can sign up
 
 - Users can log in and out
@@ -42,11 +34,10 @@ We would like to thank:
 Landing Page:
 
 ![Landing Page](http://seanboisselle.com/files/landing.png "Landing Page Screenshot")
-*********************************************************
-*														*
-*            How to run the project locally			    *
-*														*
-*********************************************************
+
+														
+            How to run the project locally			    
+													
 
 First, make sure you have Node and NPM installed. You will also
 want to install Grunt. You can find how to do this at the following links:
@@ -65,13 +56,8 @@ Type in node server.js
 Then, open up the browser of your choice and type in localhost:3000
 
 Hit enter and your app should be running locally!
-
-
-*														
-*    How to update database and server connections      *
-*														*
-*********************************************************
-
+														
+   	 How to update database and server connections      														
 The My-Ladder project has used MLab for the underlying database technology.
 
 From the root folder, navigate to server -> config -> config.js
@@ -93,6 +79,6 @@ your unique specifier. Copy and paste that after the @ symbol.
 In addition, modifying the port number will change the server port.
 For local instances, port 3000 is recommended.
 
-[The MIT License](LICENSE.md)
+
 
 
