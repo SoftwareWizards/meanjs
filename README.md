@@ -1,5 +1,5 @@
 
-*                 LINK TO DEPLOYED PAGE	  		 	    *
+                 LINK TO DEPLOYED PAGE	  		 	    *
 
 The My-Ladder app can be found via Heroku at [http://my-ladder.herokuapp.com/]
 
