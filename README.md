@@ -15,6 +15,8 @@ We would like to thank:
 													
 - Unregistered users can sign up
 
+![Sign-up Page](http://seanboisselle.com/files/Signup.png "Sign-up Page Screenshot")
+
 - Users can log in and out
 
 - Users can update profile information including passwords
