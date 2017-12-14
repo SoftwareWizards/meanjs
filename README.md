@@ -27,14 +27,15 @@ We would like to thank:
 
 ![Edit Profile functionality](http://seanboisselle.com/files/EditProfile.png "Edit Profile")
 
-
 - Access limited by user type (builders/climbers can only access certain pages)
 
 - Builders can create tasks
 
-- Builders can submit money which a climber can claim after project completion
+![Create Task functionality](http://seanboisselle.com/files/CreateTask.png "Create Task Functionality")
 
 - Climbers can view the list of tasks
+
+![List Task functionality](http://seanboisselle.com/files/TaskList.png "List Task Functionality")
 
 - App adjusts to different size windows
 
