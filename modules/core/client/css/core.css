@@ -162,3 +162,9 @@ input {
 .taskform {
 	color: lightblue;
 }
+
+.paypal-button {
+ size: medium;
+	color: gold;
+	border-radius: 2px;
+}
