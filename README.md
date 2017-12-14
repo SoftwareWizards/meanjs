@@ -34,7 +34,7 @@ We would like to thank:
 
 - Builders can create tasks
 
-![Create Task functionality](http://seanboisselle.com/files/CreateTask.png "Create Task Functionality" | width=300)
+![Create Task functionality](http://seanboisselle.com/files/CreateTask.png "Create Task Functionality" =300x)
 
 - Climbers can view the list of tasks
 
