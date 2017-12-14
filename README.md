@@ -17,7 +17,10 @@ We would like to thank:
 
 <a href="url"><img src="http://seanboisselle.com/files/Signup.png" align="left" width="300"></a><br />
 
-- Users can log in and out
+
+- Users can log in and out <br />
+
+
 
 <a href="url"><img src="http://seanboisselle.com/files/Signin.png" align="left" width="300"></a><br />
 
