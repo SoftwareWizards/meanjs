@@ -15,13 +15,13 @@ We would like to thank:
 													
 - Unregistered users can sign up
 
-<a href="url"><img src="http://seanboisselle.com/files/Signup.png" align="left" width="300"></a>
+<a href="url"><img src="http://seanboisselle.com/files/Signup.png" align="left" width="300"></a><br />
 
 - Users can log in and out
 
-<a href="url"><img src="http://seanboisselle.com/files/Signin.png" align="left" width="300"></a>
+<a href="url"><img src="http://seanboisselle.com/files/Signin.png" align="left" width="300"></a><br />
 
-<a href="url"><img src="http://seanboisselle.com/files/Signout.png" align="left" width="300"></a>
+<a href="url"><img src="http://seanboisselle.com/files/Signout.png" align="left" width="300"></a><br />
 
 - Users can update profile information including passwords
 
