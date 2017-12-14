@@ -15,46 +15,45 @@ We would like to thank:
 													
 - Unregistered users can sign up
 
-<a href="url"><img src="http://seanboisselle.com/files/Signup.png" width="300"></a><br />
-
+<a href="url"><img src="http://seanboisselle.com/files/Signup.png" width="400"></a><br />
 
 - Users can log in and out <br />
 
+<a href="url"><img src="http://seanboisselle.com/files/Signin.png" width="400"></a><br />
 
-
-<a href="url"><img src="http://seanboisselle.com/files/Signin.png" width="300"></a><br />
-
-<a href="url"><img src="http://seanboisselle.com/files/Signout.png" width="300"></a><br />
+<a href="url"><img src="http://seanboisselle.com/files/Signout.png" width="400"></a><br />
 
 - Users can update profile information including passwords
 
-![Edit Profile functionality](http://seanboisselle.com/files/EditProfile.png "Edit Profile")
+<a href="url"><img src="http://seanboisselle.com/files/EditProfile.png" width="400"></a><br />
 
 - Access limited by user type (builders/climbers can only access certain pages)
 
 - Builders can create tasks
 
-![Create Task functionality](http://seanboisselle.com/files/CreateTask.png "Create Task Functionality" =300x)
+<a href="url"><img src="http://seanboisselle.com/files/CreateTask.png" width="400"></a><br />
 
 - Climbers can view the list of tasks
 
-![List Task functionality](http://seanboisselle.com/files/TaskList.png "List Task Functionality")
+<a href="url"><img src="http://seanboisselle.com/files/TaskList.png" width="400"></a><br />
 
 - App adjusts to different size windows
 
 Small:
-![Responsive-small functionality](http://seanboisselle.com/files/ResponsiveSmall.png "Responsive Large")
+
+<a href="url"><img src="http://seanboisselle.com/files/ResponsiveSmall.png" width="400"></a><br />
 
 Large:
-![Responsive-large functionality](http://seanboisselle.com/files/ResponsiveLarge.png "Responsive Large")
+
+<a href="url"><img src="http://seanboisselle.com/files/ResponsiveLarge.png" width="400"></a><br />
 
 - Paypal API was included so the money submitted by the climber can easily be tranferred to builder once task is complete.
 
-![Payments functionality](http://seanboisselle.com/files/PayPal.png "Pay Pal API")
+<a href="url"><img src="http://seanboisselle.com/files/PayPal.png" width="400"></a><br />
 
 Landing Page:
 
-![Landing Page](http://seanboisselle.com/files/landing.png "Landing Page Screenshot")
+<a href="url"><img src="http://seanboisselle.com/files/landing.png" width="400"></a><br />
 
 														
             How to run the project locally			    
