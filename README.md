@@ -39,6 +39,12 @@ We would like to thank:
 
 - App adjusts to different size windows
 
+Small:
+![Responsive-small functionality](http://seanboisselle.com/files/ResponsiveSmall.png "Responsive Small")
+
+Large:
+![Responsive-large functionality](http://seanboisselle.com/files/ResponsiveLarge.png "Responsive Large")
+
 - Paypal API was included so the money submitted by the climber can easily be tranferred to builder once task is complete.
 
 Landing Page:
