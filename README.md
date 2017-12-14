@@ -19,7 +19,14 @@ We would like to thank:
 
 - Users can log in and out
 
+![Sign-in page](http://seanboisselle.com/files/Signin.png "Sign-in Page Screenshot")
+
+![Sign-out functionality](http://seanboisselle.com/files/Signout.png "Sign-out functionality Screenshot")
+
 - Users can update profile information including passwords
+
+![Edit Profile functionality](http://seanboisselle.com/files/EditProfile.png "Edit Profile")
+
 
 - Access limited by user type (builders/climbers can only access certain pages)
 
