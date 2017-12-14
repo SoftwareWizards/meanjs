@@ -47,6 +47,7 @@ Large:
 
 - Paypal API was included so the money submitted by the climber can easily be tranferred to builder once task is complete.
 
+![Payments functionality](http://seanboisselle.com/files/PayPal.png "Pay Pal API")
 
 Landing Page:
 
