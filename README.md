@@ -40,7 +40,7 @@ We would like to thank:
 - App adjusts to different size windows
 
 Small:
-![Responsive-small functionality](http://seanboisselle.com/files/ResponsiveSmall.png "Responsive Small" width="50% height="50%")
+<img src="http://seanboisselle.com/files/ResponsiveSmall.png " width="50%" height="50%">
 
 Large:
 ![Responsive-large functionality](http://seanboisselle.com/files/ResponsiveLarge.png "Responsive Large")
