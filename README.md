@@ -14,8 +14,8 @@ We would like to thank:
 	  Features implemented            		    
 													
 - Unregistered users can sign up
-<a href="url"><img src="http://seanboisselle.com/files/Signin.png" align="left" width="70"></a>
-![Sign-up Page](http://seanboisselle.com/files/Signup.png "Sign-up Page Screenshot")
+
+<a href="url"><img src="http://seanboisselle.com/files/Signin.png" align="left" width="300"></a>
 
 - Users can log in and out
 
