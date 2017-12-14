@@ -168,3 +168,7 @@ input {
 	color: gold;
 	border-radius: 2px;
 }
+
+.paypal-button.paypal-button-shape-pill {
+	border-radius: 2px;
+}
